@@ -1,0 +1,44 @@
+.CardContainer{
+    height:62vh;
+    width:50vh;
+    display:flex;
+    flex-direction: column;
+    color:rgb(255, 255, 255) ;
+    margin:0 0 22px 0;
+    padding:0;
+}
+
+.CardContainer>img{
+    width:100%;
+    height:40%;
+}
+.CardContainer>div{
+    width:100%;
+    padding:5%;
+    height:60%;
+    
+    /* margin: auto; */
+    background-color:rgb(19,59,90);
+}
+.CardContainer>div>h2{
+    padding: 0%;
+    margin:0px 0px 15px 0 ;
+    text-align: left;
+    font-weight: 500;
+    line-height:100%;
+    /* border:1px solid; */
+    height: 75px;
+    width: 100%;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.WriterHeading{
+    margin: 5px 0 15px 0;
+    font-weight:400;
+}
+.CardContainer>div>p{
+    color:rgba(248, 248, 248,0.6) ;
+
+}
