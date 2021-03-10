@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchData } from "../../Redux/News/Actions";
 import styles from "../../Styles/NewsBox.module.css";
+import { Heading } from "../Heading";
 import { Select } from "../Select";
 import { NewsBox } from "./NewsBox";
 import { Region } from "./Region";
@@ -24,15 +25,16 @@ const HomePage = () => {
             {news.length !== 0 && (
                 <div className={styles.news_div}>
                     <div>
-                        <Select width = {"100%"} category={"Sports"}/>
+                        <Heading width = {"100%"} category={"Sports"}/>
+                        <hr/>
                         <NewsBox data={news} category={"Sports"} />
                     </div>
                     <div>
-                        <Select width = {"100%"} category={"Entertainment"} />  
+                        <Heading width = {"100%"} category={"Entertainment"} />  
+                        <hr/>
                         <NewsBox data={news} category={"entertainment"} />
                     </div>
                     <div>
-                        
                         <Region data={news} />
                     </div>
                 </div>
@@ -40,12 +42,14 @@ const HomePage = () => {
             {news.length !== 0 && (
                 <div className={styles.news_div}>
                     <div>
-                        <Select width = {"100%"} category={"Politics"}/>
+                        <Heading width = {"100%"} category={"Politics"}/>
+                        <hr/>
                         <NewsBox data={news} category={"politics"} />
                     </div>
                     <div>
-                        <Select width = {"100%"} category={"Research"} />  
-                        <NewsBox data={news} category={"research"} />
+                        <Heading width = {"100%"} category={"Research"} />  
+                        <hr/>
+                        <NewsBox data={news} category={"technology"} />
                     </div>
                     <div>
                         <Region data={news} />
