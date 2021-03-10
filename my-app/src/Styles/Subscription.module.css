@@ -1,0 +1,44 @@
+.example {
+    background: black;
+}
+.example:hover {
+    background: white;
+}
+.normal{
+    width: 170px;
+    height: 45px;
+    margin: 50px 0px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    font-size: 30px;
+}
+.normal h3{
+    padding: 0px 20px;
+}
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+  .column1 {
+    background-color: #F38A80;
+    height: 500px;
+    border: 2px solid #D8967D;
+    border-radius: 10px;
+    margin: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+  .column2 {
+    background-color: #E6F9F9;
+    height: 500px;
+    border: 2px solid #A4D9FF;
+    border-radius: 10px;
+    margin: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
