@@ -2,7 +2,6 @@ import React from 'react'
 import { FcGoogle} from 'react-icons/fc';
 import {FaFacebookSquare,FaTwitter} from 'react-icons/fa'
 import styled from 'styled-components';
-// import {IoLogoTwitter} from 'react-icons/Io'
 
 const LogoContainer=styled.div`
     border:2px solid;

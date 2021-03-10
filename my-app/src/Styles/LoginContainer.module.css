@@ -1,0 +1,20 @@
+.container{
+    width:fit-content;
+    /* border: 1px solid; */
+    margin:auto;
+    
+}
+.imageContainer{
+    width:fit-content;
+    margin: auto;
+}
+.image{
+    width: 250px;
+    margin: 10px;
+    /* text-align: center; */
+}
+.container>h2{
+    text-align: center;
+}
+
+

@@ -2,5 +2,5 @@ import axios from "axios"
 
 
 export const fetchnews = () => {
-    return axios.get("http://localhost:3000/news")
+    return axios.get("http://localhost:8000/news")
 }
