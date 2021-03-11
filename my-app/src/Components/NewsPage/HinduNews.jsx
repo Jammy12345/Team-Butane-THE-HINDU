@@ -26,7 +26,7 @@ const HinduNews = () => {
     }, [id, dispatch]);
 
     const handlePage = (id) => {
-        history.push(`/${id}`);
+        history.push(`/page/${id}`);
         console.log(id);
     };
 

@@ -28,7 +28,7 @@ const HomePage = () => {
     }, [dispatch, category]);
 
     const handlePage = (id) => {
-        history.push(`/${id}`);
+        history.push(`/page/${id}`);
         console.log(id);
     };
 
