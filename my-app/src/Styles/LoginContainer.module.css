@@ -1,0 +1,49 @@
+.container{
+    width:fit-content;
+    /* border: 1px solid; */
+    margin:auto;
+    
+}
+.imageContainer{
+    width:fit-content;
+    margin: auto;
+}
+.image{
+    width: 250px;
+    margin: 10px;
+    /* text-align: center; */
+}
+.container>h2{
+    text-align: center;
+}
+
+
+.hrText {
+    line-height: 1em;
+    position: relative;
+    outline: 0;
+    border: 0;
+    color: black;
+    text-align: center;
+    height: 1.5em;
+    /* opacity: 0.5; */
+  }
+  .hrText:before {
+    content: "";
+    background:rgba(83, 83, 83,0.3);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+  }
+  .hrText:after {
+    content: "(OR)";
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding: 0 0.5em;
+    line-height: 1.5em;
+    color: #818078;
+    background-color: #fcfcfa;
+  }

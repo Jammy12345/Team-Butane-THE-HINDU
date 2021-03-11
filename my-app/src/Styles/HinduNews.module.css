@@ -1,0 +1,74 @@
+.container{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+}
+.right_contain div{
+    margin: 20px 0;
+}
+
+
+.report_main_div{
+    background: white;
+    width: 750px;
+    text-align: left;
+    max-height: 1800px;
+    overflow: hidden;
+}
+.report_top{
+    width: 730px;
+    background: #113a59;
+    padding: 15px 10px 45px 10px;
+}
+.report_top h4{
+    font-family: "Fira Sans",sans-serif!important;
+    line-height: 36px;
+    letter-spacing: -.5px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    font-family: "Fira Sans",sans-serif;
+    color: white;
+}
+.abs_report{
+    background: white;
+    width: 730px;
+    padding: 5px 10px 15px 10px;
+}
+.abs_report h1{
+    color: #3b5999;
+    font-weight: 600;
+    font-family: 'TundraWeb',serif;
+    padding: 15px 30px 0;
+    line-height: 36px;
+    letter-spacing: -.5px;
+    font-size: 28px;
+    margin: 0;
+}
+.abs_report div:nth-child(1){
+    position: relative;
+    width: 78%;
+    margin: 0 auto;
+    top: -55px;
+    padding: 1%;
+    background: white;
+}
+.abs_report img{
+    width: 740px;
+}
+.abs_report p{
+    text-align: left;
+    font-family: 'TundraWeb',serif;
+    font-size: 18px;
+    color: #282828;
+    line-height: 30px;
+    width: 680px;
+    padding: 10px;
+    font-weight: normal!important;
+    font-style: normal!important;
+    padding-bottom: 30px;
+}

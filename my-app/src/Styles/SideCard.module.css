@@ -1,0 +1,57 @@
+.container{
+    height: fit-content;
+    width: 280px;
+    background-color: rgb(37, 86, 122);
+    color:#ffffff;
+    padding: 0;
+}
+.heading{
+    font-weight: bolder;
+    font-size: 18px;
+    border-bottom:1.5px dashed #c4c3c3;
+    padding:15px 7px; 
+    margin-top:0;
+}
+.heading p {
+    margin-top: 0;
+}
+
+.CardContent{
+    padding: 0 8px 35px 8px;
+}
+.CardImg{
+    height:65%;
+    padding:7px 7px 
+}
+
+.CardContent{
+    
+    padding: 0 8px 25px 8px;
+}
+.CardImg{
+    height:40%;
+    width: 100%;
+}
+
+.TriangleRight{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-bottom-width: 6px;
+    border-top-width: 5px;
+    border-left: 7px solid #ffffff;
+    position: relative;
+    top: -5.5px;
+}
+.TriangleLeft{
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    border-top-width: 6px;
+    border-bottom-width: 5px;
+    border-right: 7px solid #ffffff;
+    position: relative;
+    left:272.5px;
+    top:-17px;
+    
+}

@@ -9,6 +9,7 @@
     padding-top: 3px;
     background: #f5f5f5;
     padding-top: 5%;
+    color:rgba(148, 148, 148, 0.6)
 }
 .footer_links img{
     width: 50%;
@@ -27,7 +28,7 @@
 }
 .footer_links svg{
     color: #828282;
-    font-size: 13px;
+    font-size: 25px;
     padding: 5px;
 }
 .footer_links div:nth-child(2){

@@ -1,0 +1,17 @@
+.mytextdiv{
+    display:flex;
+    flex-direction:row;
+     align-items: center;
+  }
+  .mytexttitle{
+    flex-grow:0;
+  }
+  
+  .divider{
+    flex-grow:1;
+    height: 1px;
+    background-color: #9f9f9f;
+  }
+  .mytextdiv Span{
+      color:rgba(136, 136, 136,0.8)
+  }

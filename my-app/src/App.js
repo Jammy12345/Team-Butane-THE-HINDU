@@ -1,21 +1,20 @@
 import './App.css';
-import Subscription from "./Components/Subscription";
-import { Header } from './Components/Header/Header';
-import { Footer } from './Components/Footer/Footer';
-// import { Select } from './Components/Select';
-import { HomePage } from './Components/LandingPage/HomePage';
+import { Select } from './Components/Select';
+import { Loginwith } from './Components/Loginwith';
+import {LoginContainer} from './Components/LoginContainer'
+import { Home } from './Components/LandingPage/Home';
 import { AllRoutes } from './Routes/AllRoutes';
+import { Form } from './Components/Form';
+import { SliderCard } from './Components/SliderCard';
 
 function App() {
   return (
-    // <div className="App">
-      <div><Subscription /></div>
-      // <Header />
-      // {/* <HomePage /> */}
-      // {/* <AllRoutes/> */}
-      // {/* <Footer /> */}
-      
-    // </div>
+    <div className="App">
+      <AllRoutes/>  
+      {/* <Form/> */}
+      {/* <SliderCard/> */}
+      {/* <Form/> */}
+    </div>
   );
 }
 

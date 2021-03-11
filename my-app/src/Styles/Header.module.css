@@ -32,9 +32,10 @@ body{
     padding: 0 8px;
     border-right: 1px solid #828282;
 }
+
 .header_links svg{
     color: #828282;
-    font-size: 13px;
+    font-size: 25px;
     padding: 5px;
 }
 .header_links div:nth-child(2){
