@@ -6,14 +6,15 @@ import {LoginContainer} from './Components/LoginContainer'
 import { Home } from './Components/LandingPage/Home';
 import { AllRoutes } from './Routes/AllRoutes';
 import { Form } from './Components/Form';
-import { CardGroup } from './Components/CardGroup';
+import { SliderCard } from './Components/SliderCard';
 
 function App() {
   return (
     <div className="App">
-      <AllRoutes/>
+      <AllRoutes/>  
       {/* <Form/> */}
-      {/* <CardGroup /> */}
+      {/* <SliderCard/> */}
+      {/* <Form/> */}
     </div>
   );
 }

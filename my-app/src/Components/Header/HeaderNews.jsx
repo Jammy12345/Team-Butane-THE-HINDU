@@ -2,8 +2,10 @@ import React from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import styles from "../../Styles/Header.module.css"
 import { FaNewspaper, FaBars } from "react-icons/fa";
+import { useSelector } from 'react-redux';
 
-const HeaderNews = ({handlePop}) => {
+const HeaderNews = ({handlePop}) =>{
+const authEmail = useSelector((state) => state.app.authEmail) 
 
 
     const history=useHistory()
@@ -99,7 +101,7 @@ const HeaderNews = ({handlePop}) => {
                     <button onClick={handleSubscribe} >Subscribe Now</button>
                 </div>
                 <div>
-                    <button onClick={handleSignin} >Sign In</button>
+                   {authEmail === ""? <button onClick={handleSignin} >Sign In</button> : authEmail}
                 </div>
             </div>
         </div>

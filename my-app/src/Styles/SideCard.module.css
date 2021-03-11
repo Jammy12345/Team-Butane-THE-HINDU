@@ -21,6 +21,15 @@
 }
 .CardImg{
     height:65%;
+    padding:7px 7px 
+}
+
+.CardContent{
+    
+    padding: 0 8px 25px 8px;
+}
+.CardImg{
+    height:40%;
     width: 100%;
 }
 
