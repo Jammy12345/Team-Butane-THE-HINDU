@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from '../Styles/LoginSignin.module.css'
-    
+import styles from '../Styles/LoginSignin.module.css'    
 
 export const LoginSignin = ({handleClick}) => {
     

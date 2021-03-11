@@ -1,14 +1,26 @@
 .container{
-    height: 380px;
+    height: fit-content;
     width: 280px;
     background-color: rgb(37, 86, 122);
     color:#ffffff;
-    position:absolute;
+    padding: 0;
 }
 .heading{
     font-weight: bolder;
     font-size: 18px;
     border-bottom:1.5px dashed #c4c3c3;
+    padding:15px 7px; 
+    margin-top:0;
+}
+.heading p {
+    margin-top: 0;
+}
+
+.CardContent{
+    padding: 0 8px 35px 8px;
+}
+.CardImg{
+    height:65%;
     padding:7px 7px 
 }
 

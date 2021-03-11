@@ -4,7 +4,7 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Link } from "react-router-dom";
 
-const Select = ({width, category}) => {
+const Select = ({width, category, handleNews}) => {
     const [pop, setPop] = useState("none");
 
     const handleClick = () => {
@@ -29,12 +29,12 @@ const Select = ({width, category}) => {
                     <p>
                         <ImCross onClick={handleClick} />
                     </p>
-                    <p>National</p>
-                    <p>International</p>
-                    <p>Sports</p>
-                    <p>Business</p>
-                    <p>Entertainment</p>
-                    <p>Politics</p>
+                    <p onClick = {() => handleNews("business")}>Business</p>
+                    <p onClick = {() => handleNews("research")}>Research</p>
+                    <p onClick = {() => handleNews("sports")}>Sports</p>
+                    <p onClick = {() => handleNews("technology")}>Technology</p>
+                    <p onClick = {() => handleNews("entertainment")}>Entertainment</p>
+                    <p onClick = {() => handleNews("politics")}>Politics</p>
                 </div>
             </div>
             

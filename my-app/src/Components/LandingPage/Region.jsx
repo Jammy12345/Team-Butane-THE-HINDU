@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from "../../Styles/NewsBox.module.css";
 
-const Region = ({data}) => {
+const Region = ({data, handlePage}) => {
     return (
         <div className = {styles.region_box}>
             <h5>From the Region</h5>
@@ -12,7 +12,7 @@ const Region = ({data}) => {
                         i > 0 && (
                             <div className={styles.box_flex}>
                                 <img src={e.urlToImage} alt="newsImage" />
-                                <p>{e.title}</p>
+                                <p onClick = {() => handlePage(e.id)}>{e.title}</p>
                             </div>
                         )
             )}
