@@ -10,7 +10,6 @@ import {
 import { ImCross } from "react-icons/im";
 
 const Modal = ({ handlePop, display }) => {
-    console.log(display);
     return (
         <div className={styles.modal} style={{ display: display }}>
             <div className={styles.cross}>

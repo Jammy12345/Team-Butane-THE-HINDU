@@ -1,0 +1,22 @@
+.img{
+    width:28%;
+    height:80%;
+}
+
+.para{
+    /* border:1px solid; */
+    margin: 5px;
+    font-weight:500;
+    font-size:15px;
+    height:65px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.heading{
+    /* border: 1px solid; */
+    font-weight: 700;
+    font-size:14px;
+    margin: 5px;
+}

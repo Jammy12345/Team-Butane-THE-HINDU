@@ -1,16 +1,19 @@
 import './App.css';
-import { Header } from './Components/Header/Header';
-import { Footer } from './Components/Footer/Footer';
+
 import { Select } from './Components/Select';
-import { HomePage } from './Components/LandingPage/HomePage';
+import { Loginwith } from './Components/Loginwith';
+import {LoginContainer} from './Components/LoginContainer'
+import { Home } from './Components/LandingPage/Home';
+import { AllRoutes } from './Routes/AllRoutes';
+import { Form } from './Components/Form';
+import { CardGroup } from './Components/CardGroup';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <HomePage />
-      <Footer />
-      
+      <AllRoutes/>
+      {/* <Form/> */}
+      {/* <CardGroup /> */}
     </div>
   );
 }

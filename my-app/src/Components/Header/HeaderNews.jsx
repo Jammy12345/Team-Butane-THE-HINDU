@@ -1,9 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import styles from "../../Styles/Header.module.css"
 import { FaNewspaper, FaBars } from "react-icons/fa";
 
 const HeaderNews = ({handlePop}) => {
+
+
+    const history=useHistory()
+    const handleSubscribe=()=>{
+
+        history.push("/subscribe")
+
+    }
+    const handleSignin=()=>{
+        history.push("/signin")
+    }
+
     return (
         <div className = {styles.header_news}>
             <div>
@@ -84,10 +96,10 @@ const HeaderNews = ({handlePop}) => {
                     
                 </div>
                 <div>
-                    <button>Subscribe Now</button>
+                    <button onClick={handleSubscribe} >Subscribe Now</button>
                 </div>
                 <div>
-                    <button>Sign In</button>
+                    <button onClick={handleSignin} >Sign In</button>
                 </div>
             </div>
         </div>
