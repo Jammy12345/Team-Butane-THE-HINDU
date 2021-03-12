@@ -2,6 +2,7 @@
 body{
     width:100%;
     min-height: 100%;
+    background: #f5f5f5;
 }
 .main{
     background: #f5f5f5;
@@ -35,7 +36,7 @@ body{
 
 .header_links svg{
     color: #828282;
-    font-size: 14px;
+    font-size: 25px;
     padding: 5px;
 }
 .header_links div:nth-child(2){

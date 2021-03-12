@@ -1,5 +1,5 @@
-import { fetchnews, fetchSingleNews } from "../../Utils/util"
-import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS } from "./ActionTypes"
+import { fetchnews, fetchSingleNews, postNews } from "../../Utils/util"
+import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS } from "./ActionTypes"
 import axios from "axios"
 
 
@@ -62,6 +62,25 @@ const loginfail=()=>{
     }
 }
 
+const postNewsRequest = () => {
+    return {
+        type: POST_NEWS_DATA
+    }
+}
+
+const postNewsSuccess = (payload) => {
+    return {
+        type : POST_NEWS_SUCCESS,
+        payload 
+    }
+}
+
+const postNewsFailure = () => {
+    return {
+        type : POST_NEWS_SUCCESS,
+    }
+}
+
 
 export const fetchData = () => (dispatch) => {
     dispatch(fetchNewsRequest())
@@ -89,3 +108,11 @@ export const auth=(payload)=>(dispatch)=>{
     } ).catch(()=>dispatch(loginfail))
 }
 
+export const postData = (id, payload) => (dispatch) => {
+    dispatch(postNewsRequest())
+    return postNews(id, payload)
+    .then((res) => {
+        dispatch(postNewsSuccess(res.data))
+    })
+    .catch((err) => dispatch(postNewsFailure(err)))
+}

@@ -10,6 +10,7 @@ import { NewsBox } from "./NewsBox";
 import { Region } from "./Region";
 import { BoxCard } from "../BoxCard";
 import { useHistory } from "react-router";
+import { SliderCard } from "../SliderCard";
 
 const HomePage = () => {
     const news = useSelector((state) => state.app.news);
@@ -147,6 +148,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            <SliderCard data = {news} handlePage={handlePage} />
         </div>
     );
 };

@@ -10,19 +10,15 @@
 .right_contain div{
     margin: 20px 0;
 }
-
-
 .report_main_div{
     background: white;
     width: 750px;
     text-align: left;
-    max-height: 1800px;
-    overflow: hidden;
 }
 .report_top{
-    width: 730px;
+    width: 750px;
     background: #113a59;
-    padding: 15px 10px 45px 10px;
+    padding: 25px 10px 65px 10px;
 }
 .report_top h4{
     font-family: "Fira Sans",sans-serif!important;
@@ -71,4 +67,27 @@
     font-weight: normal!important;
     font-style: normal!important;
     padding-bottom: 30px;
+}
+.comments{
+    background: white;
+    padding: 2%;
+    margin: 0 auto;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: 60%;
+    margin-bottom: 30px;
+}
+.height_limit{
+    height: 800px;
+    overflow: hidden;
+}
+.abs_report h2{
+    font-size: 18px;
+    margin: 0;
+    padding: 5% 4% 4% 2%;
+    font-weight: 600;
+    line-height: 25px;
+    padding-bottom: 10px!important;
+    color: #144d94;;
 }

@@ -5,7 +5,7 @@ import {
     FETCH_SINGLE_DATA,
     FETCH_SINGLE_FAILURE,
     FETCH_SINGLE_SUCCESS,
-    LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS 
+    LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_NEWS_FAILURE 
 } from "./ActionTypes";
 import { saveData,loadData } from "../../Components/LocalstorageAuth";
 
@@ -96,6 +96,25 @@ export const reportReducer = (state = initialState, { type, payload }) => {
                 isError: true,
             };
         }    
+        case POST_NEWS_DATA: {
+            return {
+                ...state,
+                isLoading: true,
+            };
+        }
+        case POST_NEWS_SUCCESS: {
+            return {
+                ...state,
+                isLoading: false,
+            };
+        }
+        case POST_NEWS_FAILURE: {
+            return {
+                ...state,
+                isLoading: false,
+                isError: true,
+            };
+        }  
         default:{
             return state
         }
