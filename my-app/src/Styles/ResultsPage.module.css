@@ -1,8 +1,8 @@
 .head {
     grid-area: header;
-    width: 50%;
+    width: 60%;
     height: 50px;
-    margin: 10px 10% 10px 12.5%;
+    margin: 10px 10% 10px 10%;
     background-color:#E5E5E2;
   }
   .head h2{
@@ -32,7 +32,7 @@
     background-color:#E5E5E2;
     width: 50%;
     height: auto;
-    margin: 0px 0px 10px 50%;
+    margin: 0px 0px 10px 40%;
   }
   .nav ul{
       padding-inline-start: 10px !important;
