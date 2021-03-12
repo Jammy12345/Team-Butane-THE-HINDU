@@ -12,14 +12,14 @@ import { Footer } from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div>
-      {/* <AllRoutes/>   */}
+    <div className={App}>
+      <AllRoutes/>  
       {/* <Form/> */}
       {/* <SliderCard/> */}
       {/* <Form/> */}
-      <Header/>
+      {/* <Header/>
       <ResultsPage/>
-      <Footer/>
+      <Footer/> */}
     </div>
   );
 }
