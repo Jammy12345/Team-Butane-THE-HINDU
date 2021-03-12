@@ -7,7 +7,6 @@ const Personalise = () => {
     
     return isAuth ? (
         <div>
-            
         </div>
     ) : <Loginin/>
 }

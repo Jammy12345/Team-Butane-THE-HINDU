@@ -40,7 +40,7 @@ body{
     cursor: pointer;
     color: rgb(71,159,198);
 }
-.SidebarList #active{
+.SidebarList .active{
     background-color: rgb(236,246,248);
     color: rgb(71,159,198);
 }

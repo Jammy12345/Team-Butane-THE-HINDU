@@ -11,6 +11,7 @@ body{
 .main img{
     padding-top: 1%;
     width: 40%;
+    margin-left: 30%;
 }
 .header_links{
     display: flex;
@@ -103,9 +104,10 @@ body{
     border-bottom: 1px solid #828282;
 }
 .header_news div:nth-child(1) svg{
-    font-size: 25px;
+    font-size: 28px;
     color: #828282;
     cursor: pointer;
+    padding-left: 5px;
 }
 .header_news a{
     text-decoration: none;

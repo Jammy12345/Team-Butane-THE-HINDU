@@ -45,7 +45,7 @@ const AuthReducer = (state = initState, { type, payload }) => {
             return {
                 ...state,
                 isLoading: false,
-                isError: false
+                isError: false  
             }
         case SIGNUP_FAILURE:
             return {

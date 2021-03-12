@@ -10,6 +10,7 @@ import { NewsBox } from "./NewsBox";
 import { Region } from "./Region";
 import { BoxCard } from "../BoxCard";
 import { useHistory } from "react-router";
+import Loader from "../Loader";
 
 const HomePage = () => {
     const news = useSelector((state) => state.app.news);
@@ -33,7 +34,7 @@ const HomePage = () => {
     };
 
     return loading ? (
-        <div>...loading</div>
+        <Loader/>
     ) : error ? (
         <div>Something went wrong</div>
     ) : (

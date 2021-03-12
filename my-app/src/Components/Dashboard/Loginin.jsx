@@ -12,7 +12,7 @@ const Loginin = () => {
     }
     return (
         <div className={styles.LogininWrapper}>
-            <div><img src="https://www.thehindu.com/brandhub/d8b8gc/article26139666.ece/binary/dashboard-icon" alt="newspaper-logo" /></div>
+            <div style={{marginLeft: "10%"}}><img src="https://www.thehindu.com/brandhub/d8b8gc/article26139666.ece/binary/dashboard-icon" alt="newspaper-logo" /></div>
             <div className={styles.logoText}><p>Sign Up or Subscribe to set up <br /> your personalised Dashboard</p></div>
             <div className={styles.btn}>
                 <button onClick={handleSubscribe}>
@@ -22,7 +22,7 @@ const Loginin = () => {
                     SIGN UP FOR FREE
                 </button>
             </div>
-            <div>
+            <div style={{marginLeft: "15%", marginTop: "1%"}}>
                 <p>Already have an account ? <Link to="/signin" style={{color: "rgb(94,180,217)", paddingLeft: "5px", textDecoration: "none"}}>Sign in</Link></p>
             </div>
         </div>
