@@ -6,14 +6,20 @@ import { Home } from './Components/LandingPage/Home';
 import { AllRoutes } from './Routes/AllRoutes';
 import { Form } from './Components/Form';
 import { SliderCard } from './Components/SliderCard';
+import ResultsPage from "./Components/ResultsPage";
+import { Header } from './Components/Header/Header';
+import { Footer } from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <AllRoutes/>  
+    <div>
+      {/* <AllRoutes/>   */}
       {/* <Form/> */}
       {/* <SliderCard/> */}
       {/* <Form/> */}
+      <Header/>
+      <ResultsPage/>
+      <Footer/>
     </div>
   );
 }
