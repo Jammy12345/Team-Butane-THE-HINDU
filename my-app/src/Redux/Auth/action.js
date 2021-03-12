@@ -58,4 +58,4 @@ const signupUser = (payload) => (dispatch) => {
         })
     .catch(() => dispatch(SignupFailure()))
 }
-export { loginUser, signupUser };
+export { loginUser, signupUser, logout };

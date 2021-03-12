@@ -3,11 +3,12 @@ import { HeaderSocial } from "./HeaderSocial";
 import styles from "../../Styles/Header.module.css";
 import { HeaderNews } from "./HeaderNews";
 import { Modal } from "./Modal";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const Header = () => {
     const [pop, setPop] = useState("none");
     const date = new Date().toDateString();
+    const history = useHistory();
 
     const handlePop = () => {
         if(pop === "none"){
@@ -17,13 +18,18 @@ const Header = () => {
         }
     }
 
+    const handleRedirect = () => {
+        history.push('/')
+    }
     return (
         <>
         <div className={styles.main}>
             <HeaderSocial />
             <img
                 src="https://th.thgim.com/static/theme/default/base/img/logo.png"
-                alt="logo"
+                    alt="logo"
+                    onClick={handleRedirect}
+                    style={{cursor: "pointer"}}
             />
             <div>
                 <span>
