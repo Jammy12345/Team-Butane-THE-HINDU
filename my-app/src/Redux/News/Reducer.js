@@ -1,5 +1,5 @@
 import { saveData,loadData } from "../../Components/LocalstorageAuth";
-import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS,LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS } from "./ActionTypes";
+import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS,LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS,SEARCH_NEWS } from "./ActionTypes";
 
 
 
@@ -56,8 +56,14 @@ export const newsReducer = (state = initState, {type, payload}) => {
                 error:false
             }
         }
-
-    
+        case (SEARCH_NEWS):{
+            return{
+                ...state,
+                news:payload,
+                loading: false,
+                error:false
+            }
+        }
         default:{
             return state
         }

@@ -2,13 +2,15 @@ import React from 'react'
 import { Route } from 'react-router'
 import { Home } from '../Components/LandingPage/Home'
 import { LoginContainer } from '../Components/LoginContainer'
+import { Searchnews } from '../Components/Searchnews'
+import Subscription from '../Components/Subscription'
 
 export const AllRoutes = () => {
     return (
         <>
-          <Route exact path="/subscribe"></Route>
+          <Route exact path="/subscribe"><Subscription/></Route>
           <Route exact path="/signin" ><LoginContainer/></Route>
-
+          <Route exact path="/search/q/:searchInput" ><Searchnews/> </Route>
           <Route exact path="/" ><Home/></Route>
         </>
     )

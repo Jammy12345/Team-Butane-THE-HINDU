@@ -19,9 +19,7 @@ export const Newcardm = ({props}) => {
             <div>
             <p className={style.heading} >NATIONAL</p>
                <p className={style.para} >
-                    <Dot>
-                        <FaRegDotCircle  />
-                    </Dot>
+    
                     &nbsp; Delhi HC seeks response from Centre on petition against new IT Rules
                     Delhi HC seeks response from Centre on petition against new IT Rules
                     1hr 
