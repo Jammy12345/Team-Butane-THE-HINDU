@@ -1,0 +1,140 @@
+
+.head {
+    grid-area: header;
+    width: 53%;
+    margin: 10px 10% 10px 10%;
+    background-color:#E5E5E2;
+    padding:5px 0;
+  }
+  .head h2{
+      float: left;
+      vertical-align: middle;
+      padding:8px 20px 0 20px;
+      font-size: 18px;
+      color:rgb(59, 59, 59);
+      margin: 0;
+      font-weight: 400;
+  }
+  
+  .content {
+    width: 50%;
+    height: auto;
+    float:right;
+    grid-area: content;
+    margin-bottom: 10px;
+  }
+  .nav {
+    float: left;
+    grid-area: nav;
+    background-color:#E5E5E2;
+    width: 60%;
+    
+    height: 160vh;
+    margin: 0px 0px 10px 40%;
+  }
+  .nav ul{
+      padding-inline-start: 10px !important;
+      list-style-type: none;
+  }
+  .nav ul li div{
+      color: #555555;
+      font-weight: bold;
+  }
+  .line {
+      border-bottom: 1px solid #b4aeae;
+      width: 90%;
+      margin: 0px 2px;
+}
+ul>li{
+  padding:1px;
+}
+li button{
+    text-align: left;
+    margin-top: 10px;
+    width: 90%;
+    font-weight: bold;
+    background-color: #E5E5E2;
+    border: 1px solid #E5E5E2;
+    color: #555555;
+    font-size:15px;
+    padding:5px 0;
+}
+.allCategory{
+    background-color:#133B5A;
+    color: white;
+}
+li button:hover{
+    background-color:#133B5A;
+    color: white;
+}
+
+  .wrapper {
+    display: grid;
+    gap: 20px;
+  }
+  .inputDesign{
+      border: 1px solid white;
+      margin-top: 4px;
+      padding:7px;
+  }
+
+  
+
+  @media (min-width: 500px) {
+    .wrapper {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "header"
+        "nav"
+        "content";
+    }
+    /* nav ul {
+      display: flex;
+      justify-content: space-between;
+    } */
+    
+  }
+
+  @media (min-width: 700px) {
+    .wrapper {
+      grid-template-columns:1fr 3fr;
+      grid-template-areas:
+        "header header"
+        "nav content"
+     }
+     nav ul {
+       flex-direction: column;
+     }
+  }
+  .sort{
+    display:flex;
+    justify-content: space-between;
+    
+  }
+  .sort>div>div{
+    display:inline;
+    padding: 0 5px;
+    
+  }
+  .sort>div>div:hover{
+    color: rgb(86, 86, 243);
+    cursor: pointer;
+  }
+
+  .mytextdiv{
+    margin-top: 15px;
+    display:flex;
+    flex-direction:row;
+     align-items: baseline;
+     
+  }
+  .mytexttitle{
+    padding-left: 10px;
+    flex-grow:0;
+  }
+  
+  .divider{
+    flex-grow:1;
+    height: 1px;
+    background-color: #9f9f9f;
+  }

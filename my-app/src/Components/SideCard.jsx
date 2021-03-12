@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 
 import styles from '../Styles/SideCard.module.css'
@@ -9,20 +9,24 @@ const BottomCard=styled.div`
     align-items:space-between;
     
 `
-export const SideCard = () => {
+export const SideCard = ({data, category}) => {
+    const [newData, setNewData] = useState(data);
+    useEffect(() => {
+        const news = data.filter((e) => e.category === category)
+        setNewData(news)
+    }, []);
     return (
         <div className={styles.container} >
-          <u> <b><p className={styles.heading} >U.S. trade report flags challenges from ‘Make in India’ policy</p></b></u>
+          <u> <b><p className={styles.heading} >More from {category}</p></b></u>
             <div className={styles.TriangleRight} ></div>
             <div className={styles.TriangleLeft} ></div>
 
         <BottomCard>
             <div className={styles.CardContent} >
-                <p>The campaign epitomises the challenges facing bilateral trade ties, U.S. Congress told</p>
-                <small>SRIRAM LAKSHMAN</small>
+                <p>{newData[newData.length-2].title}</p>
             </div>
             <div>
-                <img className={styles.CardImg} src="https://th.thgim.com/news/national/other-states/fl7sru/article33861660.ece/ALTERNATES/FREE_660/664313-12-202020-36-5014CMUDDHAVTHACKERAYPRESSCONFERENCEJPG" alt="ok"/>
+                <img className={styles.CardImg} src={newData[newData.length-2].urlToImage} alt="ok"/>
             </div>
         </BottomCard>
         </div>

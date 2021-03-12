@@ -8,6 +8,7 @@ import { ListingcardSearch } from './ListingcardSearch'
 import LoadingOverlay from 'react-loading-overlay';
 
 import BounceLoader, { BarLoader } from 'react-spinners'
+import { Loadertest } from './Loadertest'
 
 const GridConainer=styled.div`
     display:flex;
@@ -46,6 +47,12 @@ export const Searchnews = () => {
         active="true"
         classNamePrefix="_loading_overlay_spinner"
         spinner
+        styles={{
+            
+            spinner: {margin:"0px",padding:"0"}
+          }}
+
+          classNamePrefix='_loading_overlay_spinner'
         text='Loading...'
         >
             {/* {news&&news.map((el,i)=><ListingcardSearch key={i} data={el} />)} */}

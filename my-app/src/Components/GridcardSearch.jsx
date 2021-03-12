@@ -5,7 +5,7 @@ import styled from 'styled-components'
 const GridcardSearchContainer =styled.div`
     width:17vw;
     height:55vh;
-    border:1px solid;
+    // border:1px solid;
     diplay:flex;
     flex-direction:column;
     text-align:left;
@@ -43,9 +43,9 @@ const GridcardSearchContainer =styled.div`
     }
 
 `
-export const GridcardSearch = ({data}) => {
+export const GridcardSearch = ({data,Eachnews}) => {
     return (
-        <GridcardSearchContainer>
+        <GridcardSearchContainer onClick={()=>Eachnews(data.id)}>
                 <img src={data.urlToImage} alt=""/>
             <div className="content" >
             <p className="category">{data.category}</p>

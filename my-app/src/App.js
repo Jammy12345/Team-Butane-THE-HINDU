@@ -1,5 +1,4 @@
 import './App.css';
-
 import { Select } from './Components/Select';
 import { Loginwith } from './Components/Loginwith';
 import {LoginContainer} from './Components/LoginContainer'
@@ -11,16 +10,20 @@ import { ListingcardSearch } from './Components/ListingcardSearch';
 import { GridcardSearch } from './Components/GridcardSearch';
 import { Subscriptionparttwo } from './Components/Subscriptionparttwo';
 
+import ResultsPage from "./Components/ResultsPage";
+import { Header } from './Components/Header/Header';
+import { Footer } from './Components/Footer/Footer';
+import { Searchnews } from './Components/Searchnews';
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AllRoutes/>  
       {/* <Form/> */}
       {/* <SliderCard/> */}
       {/* <Form/> */}
-      {/* <ListingcardSearch/> */}
-      {/* <GridcardSearch/> */}
+      {/* <ResultsPage/> */}
+      {/* <Searchnews/> */}
     </div>
   );
 }

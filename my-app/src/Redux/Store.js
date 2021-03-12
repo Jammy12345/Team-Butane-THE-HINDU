@@ -1,9 +1,10 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
-import { newsReducer } from "./News/Reducer";
+import { newsReducer, reportReducer } from "./News/Reducer";
 
 const rootReducer = combineReducers({ 
-    app : newsReducer
+    app : newsReducer,  
+    news : reportReducer
  });
 
 let composeEnhancers = compose;

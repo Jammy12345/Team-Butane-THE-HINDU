@@ -3,8 +3,7 @@ import styled from 'styled-components'
 
 
 const ListingcardSearchContainer=styled.div`
-    border:1px solid;
-    width:35vw;
+    width:36.5vw;
     height:128px;
     display:flex;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -62,10 +61,11 @@ const ListingcardSearchContainer=styled.div`
     
 `
 
-export const ListingcardSearch = ({data}) => {
+export const ListingcardSearch = ({data,Eachnews}) => {
     console.log(data)
+    
     return (
-        <ListingcardSearchContainer>
+        <ListingcardSearchContainer onClick={()=>Eachnews(data.id)} >
             <img src={data.urlToImage} alt=""/>
             <div className="cardcontent">
                 <p className="category">{data.category}</p>

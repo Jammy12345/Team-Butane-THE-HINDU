@@ -2,9 +2,15 @@
     width: 80%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     background-color: #f5f5f5;
     padding: 1% 0;
+}
+.news_div hr{
+    height: 2px;
+    background: #133b5a;
+    border: none;
+    z-index: 0;
 }
 .news_div p{
     cursor: pointer;
@@ -52,7 +58,7 @@
     border-bottom: 1px dashed #b4b4b4;
     max-height: 80px;
 }
-.box_flex img{
+.box_flex img,.all_news_right img{
     min-width: 80px;
     min-height: 70px;
     max-height: 75px;
@@ -60,7 +66,7 @@
     margin-right: 6px;
     margin-left: 5px;
 }
-.box_flex p{
+.box_flex p, .all_news_right p{
     font-family: "TundraWeb",serif;
     font-size: 16px;
     line-height: 18px;
@@ -81,4 +87,107 @@
 }
 .region_box p:hover{
     text-decoration: underline;
+}
+.main_card{
+    width: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+.all_news_div{
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    width: 750px    ;
+}
+
+.all_news_left img{
+    width: 300px;
+    height: 210px;
+}
+.all_news_left{
+    width: 300px;
+    background: white;
+    padding-bottom: 20px;
+    max-height: 350px;
+}
+.all_news_left h1{
+    font-family: 'TundraWeb',serif;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: -.5px;
+    color: #282828;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 300;
+}
+.all_news_left p{
+    padding: 0;
+    margin: 9px 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    color: #505050;
+    margin-left: 5px;
+}
+.all_news_right{
+    display: flex;
+    align-items: center;
+    width: 80%;
+    background: white;
+    border-bottom: 1px dotted #505050;
+    padding: 8px;
+    margin-left: 18px;
+}
+.hr > div{
+    width: 80%;
+    margin: 0 auto;
+}
+.hr hr{
+    width: 80%;
+    height: 2px;
+    border: none;
+    background: #144d94;
+}
+.box_card{
+    width: 250px;
+    height: 250px;
+    background: #144d94;
+    position: relative;
+    cursor: pointer;
+}
+.box_card img{
+    width: 250px;
+    height: 130px;
+}
+.box_card p{
+    font-family: 'TundraWeb',serif;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -.5px;
+    color: white;
+    margin: 0;
+    margin: 8px;
+    display: block;
+    font-weight: 300;
+    text-align: left;
+}
+.box_card p:hover{
+    text-decoration: underline;
+}
+.box_card span{
+    display: inline-block;
+    background-color: #fc0;
+    color: #333;
+    padding: 1px 7px 1px 7px;
+    font-size: .7em;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    width: fit-content; 
+    top:125px;
+    left: 10px;
 }
