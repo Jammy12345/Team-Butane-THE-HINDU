@@ -1,0 +1,31 @@
+.newsCardWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    width: 90%;
+    margin: 1% auto;
+    padding: 1%;
+    background-color: rgb(245,245,245);
+    flex-direction: row;
+    /* border: 1px dotted black; */
+    cursor: pointer
+}
+.newsCardWrapper:hover{
+    color: rgb(94,180,217)
+}
+.newsCardImg{
+    margin-left: 40%;
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    padding: 1%
+}
+.newsCardTitle{
+    font-size: 14px;
+    font-weight: bold;
+    font-style: normal;
+    letter-spacing: 1.4px;
+    text-align: left
+}

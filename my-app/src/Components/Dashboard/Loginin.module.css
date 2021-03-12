@@ -1,0 +1,31 @@
+.LogininWrapper{
+    margin: 1% auto
+}
+.logoText{
+    color: rgb(94,180,217);
+    letter-spacing: 0.2ch;
+    font-size: 17px;
+    margin: 2%;
+}
+.btn > button{
+    margin: 2%;
+    height: 8vh;
+    border-radius: 5px;
+    padding: 1%;
+    letter-spacing: 0.2ch;
+}
+.btn > button:focus{
+    outline: rgb(82, 172, 211);
+}
+.btn > button:nth-of-type(1){
+    background-color: rgb(94,180,217);
+    color: white;
+    border: none;
+    width: 18%;
+    margin-right: 1%;
+}
+.btn > button:nth-of-type(2){
+    border: 1px solid rgb(94,180,217);
+    color: rgb(94,180,217);
+    margin-left: 1%;
+}

@@ -1,10 +1,12 @@
 import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import thunk from "redux-thunk";
 import { newsReducer, reportReducer } from "./News/Reducer";
+import { AuthReducer } from "../Redux/Auth/reducer";
 
 const rootReducer = combineReducers({ 
     app : newsReducer,  
-    news : reportReducer
+    news: reportReducer,
+    auth: AuthReducer
  });
 
 let composeEnhancers = compose;
