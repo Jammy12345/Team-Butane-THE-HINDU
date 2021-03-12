@@ -17,6 +17,9 @@ const authEmail = useSelector((state) => state.app.authEmail)
     const handleSignin=()=>{
         history.push("/signin")
     }
+    const handleRedirect = () => {
+        history.push("/dashboard");
+    }
 
     return (
         <div className = {styles.header_news}>
@@ -93,7 +96,7 @@ const authEmail = useSelector((state) => state.app.authEmail)
             <div className = {styles.dash}>
                 <div>
                     <div className = {styles.newspaper}>
-                        <FaNewspaper />
+                        <FaNewspaper onClick={handleRedirect}/>
                     </div>
                     
                 </div>
