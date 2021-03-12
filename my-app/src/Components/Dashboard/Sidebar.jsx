@@ -18,6 +18,7 @@ const Sidebar = () => {
     const news = useSelector((state) => state.app.news)
     const isAuth = useSelector((state) => state.auth.isAuth);
 
+
     return (
         <div className={styles.dashboardWrapper}>
             <div className={styles.Sidebar}>

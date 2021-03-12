@@ -8,7 +8,7 @@ import styles from "../../Styles/HinduNews.module.css";
 import { NewsData } from "./NewsData";
 import { BoxCard } from "../BoxCard";
 import { SliderCard } from "../SliderCard"
-import { SideCard } from "../SideCard";
+import Loader from "../Loader";
 
 const HinduNews = () => {
     const [load, setLoad] = useState(true);
@@ -39,6 +39,7 @@ const HinduNews = () => {
     return (
         <>
             <Header />
+            {loading && <Loader/>}
             {!loading && !isLoading && !load && news.length !== 0 && (
                 <>
                     <div className={styles.container}>

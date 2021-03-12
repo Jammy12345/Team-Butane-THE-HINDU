@@ -5,14 +5,12 @@ import { FaNewspaper, FaBars } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 
 const HeaderNews = ({handlePop}) =>{
-const authEmail = useSelector((state) => state.app.authEmail) 
-
+const username = useSelector((state) => state.auth.username) 
+const isAuth = useSelector((state) => state.auth.isAuth);
 
     const history=useHistory()
     const handleSubscribe=()=>{
-
         history.push("/subscribe")
-
     }
     const handleSignin=()=>{
         history.push("/signin")
@@ -20,7 +18,6 @@ const authEmail = useSelector((state) => state.app.authEmail)
     const handleRedirect = () => {
         history.push("/dashboard");
     }
-
     return (
         <div className = {styles.header_news}>
             <div>
@@ -98,13 +95,12 @@ const authEmail = useSelector((state) => state.app.authEmail)
                     <div className = {styles.newspaper}>
                         <FaNewspaper onClick={handleRedirect}/>
                     </div>
-                    
                 </div>
                 <div>
                     <button onClick={handleSubscribe} >Subscribe Now</button>
                 </div>
                 <div>
-                   {authEmail === ""? <button onClick={handleSignin} >Sign In</button> : authEmail}
+                   {!isAuth ? <button onClick={handleSignin} >Sign In</button> : <h5>{`Hi ${username}`}</h5>}
                 </div>
             </div>
         </div>
