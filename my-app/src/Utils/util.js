@@ -15,5 +15,8 @@ export const checkLogin = (email) => {
     });
 }
 export const fetchSingleNews = (id) => {
-    return axios.get(`https://fake-server-ashutosh.herokuapp.com/news/${id}`)
+    return axios.get(`http://localhost:3000/news/${id}`)
+}
+export const postNews = (id, payload) => {
+    return axios.post(`https://localhost:3000/news/${id}`,payload)
 }

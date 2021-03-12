@@ -85,9 +85,8 @@ const SignUp = () => {
   }
 
   const handleRedirect = (status) => {
-    console.log("working")
     if (status === 201) {
-      history.push('/')
+      history.push('/signin')
     }else{
       window.alert("Something went wrong, please try again!")
     }

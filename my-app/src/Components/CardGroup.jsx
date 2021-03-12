@@ -5,17 +5,10 @@ import styles from '../Styles/CardGroup.module.css'
 import styled from 'styled-components'
 
 
-<<<<<<< HEAD
-// const Right = styled.div `
-//     display:flex;
-//     flex-direction:column;
-// `
-=======
 const Right=styled.div `
     display:flex;
     flex-direction:column;
 `
->>>>>>> 54d8d1be5e2c67851a1c2a5a8b055563b518976a
 
 export const CardGroup = () => {
     return (
@@ -26,10 +19,7 @@ export const CardGroup = () => {
             </div>
             <div>
                 <Newcardm>
-<<<<<<< HEAD
-=======
               
->>>>>>> 54d8d1be5e2c67851a1c2a5a8b055563b518976a
                 </Newcardm>
                 <Newcardm/>
                 <Newcardm/>

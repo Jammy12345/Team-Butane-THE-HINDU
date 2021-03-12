@@ -10,9 +10,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
 
     const history=useHistory()
     const handleSubscribe=()=>{
-
         history.push("/subscribe")
-
     }
     const handleSignin=()=>{
         history.push("/signin")

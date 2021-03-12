@@ -1,7 +1,14 @@
+
+.slider_div img{
+  width: 150px; 
+  margin: 0 15px;
+}
 .mytextdiv{
     display:flex;
     flex-direction:row;
      align-items: center;
+     width: 80%;
+     margin: 0 auto;
   }
   .mytexttitle{
     flex-grow:0;

@@ -9,7 +9,8 @@ import { SideCard } from "../SideCard";
 import { NewsBox } from "./NewsBox";
 import { Region } from "./Region";
 import { BoxCard } from "../BoxCard";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom"
+import { SliderCard } from "../SliderCard"
 import Loader from "../Loader";
 
 const HomePage = () => {
@@ -29,7 +30,7 @@ const HomePage = () => {
     }, [dispatch, category]);
 
     const handlePage = (id) => {
-        history.push(`/page/${id}`);
+        history.push(`/news/${id}`);
         console.log(id);
     };
 
@@ -148,6 +149,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            <SliderCard data = {news} handlePage={handlePage} />
         </div>
     );
 };
