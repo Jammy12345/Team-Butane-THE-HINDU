@@ -1,5 +1,5 @@
 import { fetchnews, fetchSingleNews, postNews } from "../../Utils/util"
-import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS } from "./ActionTypes"
+import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE } from "./ActionTypes"
 import axios from "axios"
 
 
@@ -30,6 +30,7 @@ const fetchSingleRequest = () => {
 }
 
 const fetchSingleSuccess = (payload) => {
+    console.log("working")
     return {
         type : FETCH_SINGLE_SUCCESS,
         payload 
@@ -37,6 +38,7 @@ const fetchSingleSuccess = (payload) => {
 }
 
 const fetchSingleFailure = () => {
+    console.log("working")
     return {
         type : FETCH_SINGLE_FAILURE,
     }
@@ -81,6 +83,27 @@ const postNewsFailure = () => {
     }
 }
 
+const postBookRequest = () => {
+    return {
+        type: POST_BOOK_DATA
+    }
+}
+
+const postBookSuccess = (payload) => {
+    return {
+        type : POST_BOOK_SUCCESS,
+        payload 
+    }
+}
+
+const postBookFailure = () => {
+    return {
+        type : POST_BOOK_FAILURE,
+    }
+}
+
+
+
 
 export const fetchData = () => (dispatch) => {
     dispatch(fetchNewsRequest())
@@ -90,6 +113,7 @@ export const fetchData = () => (dispatch) => {
 }
 
 export const fetchReport = (id) => (dispatch) => {
+   
     dispatch(fetchSingleRequest())
     return fetchSingleNews(id)
     .then(res => dispatch(fetchSingleSuccess(res.data)))
@@ -116,3 +140,5 @@ export const postData = (id, payload) => (dispatch) => {
     })
     .catch((err) => dispatch(postNewsFailure(err)))
 }
+
+

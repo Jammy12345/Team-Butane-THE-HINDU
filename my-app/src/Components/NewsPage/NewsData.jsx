@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../Styles/HinduNews.module.css";
 import { Comment } from "./Comment";
 
-const NewsData = ({ data }) => {
+const NewsData = ({ data, user, auth }) => {
     return (
         <div className={styles.report_main_div}>
             <div className={styles.report_top}>
@@ -21,7 +21,7 @@ const NewsData = ({ data }) => {
                 </div>
             </div>
             <div>
-                <Comment data={data} />
+                <Comment data={data} user={user} auth={auth} />
             </div>
         </div>
     );

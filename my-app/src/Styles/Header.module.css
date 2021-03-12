@@ -35,9 +35,11 @@ body{
 }
 
 .header_links svg{
+
     color: #828282;
     font-size: 25px;
     padding: 5px;
+    padding-left: 15px;
 }
 .header_links div:nth-child(2){
     position: relative;
@@ -106,6 +108,7 @@ body{
 .header_news div:nth-child(1) svg{
     font-size: 25px;
     color: #828282;
+    padding-left: 15px;
     cursor: pointer;
 }
 .header_news a{

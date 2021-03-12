@@ -1,50 +1,78 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router";
-import { fetchReport, postData } from "../../Redux/News/Actions";
-import { postNews } from "../../Utils/util";
-import MUIRichTextEditor from "mui-rte";
+import React, { useState } from "react";
+import { useHistory } from "react-router";
 import styles from "../../Styles/Comments.module.css";
-import { Button, TextareaAutosize } from "@material-ui/core";
+import { Button } from "@material-ui/core";
+import CommentCard from "./CommentCard";
+import { FaBookmark } from "react-icons/fa";
 
-const Comment = ({
-    handleLike,
-    handleDislike,
-    likes,
-    dislikes,
-    handleChange,
-}) => {
-    // const [msg, setMsg] = useState("");
-    // const [diasable, setDiasable] = useState(false);
-    // const dispatch = useDispatch()
-    // const {id} = useParams()
-    // const data = useSelector(state => state.news.report)
-    console.log("working");
+const Comment = ({ user, auth }) => {
+    const history = useHistory()
+    const [comm, setComm] = useState([]);
+    const [comment, setComment] = useState("");
+    const [color, setColor] = useState("");
 
-    const handleSubmit = () => {};
+    const handleLogin = () => {
+        history.push("/signin")
+    };
+
+    const handleComments = () => {
+        const payload = {
+            name : user,
+            date : new Date().toLocaleDateString(),
+            comment : comment
+        }
+        if(comm.length !== 0){
+            setComm([...comm, payload])
+        } else {
+            setComm([payload])
+        }
+    }
+
+    const handleChange = () => {
+        setColor("skyblue")
+    }
+
+    const handleClick = (e) => {
+      let a =  e.target.value
+      setComment(a)
+    }
+
     return (
         <div className={styles.comment_main}>
+            {console.log("a")}
             <div>
-                <div>
-                    <h4>{`Comments()`}</h4>
+                <div className = {styles.bookmarks}>
+                    <h4>{`Comments (${comm.length})`}</h4>
+                    <FaBookmark onClick = {handleChange} color = {color} size = "25px"/>
                 </div>
             </div>
-            {/* <div>
-                <button onClick = {handleLike}>like</button>
-                <button onClick = {handleDislike}>Dislikes</button>
-            </div> */}
-            {/* <div>
-            <input type="text"
-            onChange = {(e) => setMsg(e.target.value)}
-            />
-            <button onClick = {handleSubmit}>SUBMIT</button>
-            </div> */}
             <div>
                 <div className={styles.comment_box}>
-                    <textarea type="text" />
-                    <Button variant="contained" color="primary">
-                        Primary
-                    </Button>
+                    <textarea
+                    onChange = {(e) => handleClick(e)}
+                     type="text" />
+                    {auth ? (
+                        <Button onClick = {handleComments}
+                        variant="contained" color="secondary">
+                            Post
+                        </Button>
+                    ) : (
+                        <Button
+                            onClick={handleLogin}
+                            variant="contained"
+                            color="primary"
+                        >
+                            Login
+                        </Button>
+                    )}
+                    <div>
+                        {
+                            comm.length !== 0 &&
+                            comm?.map((e, i) => (
+                                <CommentCard id = {i} {...e}/>
+                            ))
+                        }
+                    </div>
                 </div>
                 <div className={styles.privacy}>
                     <p>
