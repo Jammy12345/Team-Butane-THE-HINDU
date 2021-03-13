@@ -1,28 +1,43 @@
 import React from "react";
-import { Button, Card, ListGroup, ListGroupItem } from "react-bootstrap";
-import 'bootstrap/dist/css/bootstrap.min.css';
-import styles from "../Styles/Subscription.module.css";
+// import { Button, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+
+import styles from '../Styles/Subscribtion.module.css'
+import { Subscriptionparttwo } from "./Subscriptionparttwo";
 
 
 const Subscription = () => {
-    const { paymentType, setPaymentType } = React.useState(false)
-    const handleAutoRenewal = () => {
+    const [paymentType, setPaymentType ] = React.useState(true)
+
+
+    const handlebtnClick=()=>{
+
+        setPaymentType(!paymentType)        
+
     }
-    const handleOneTimePayment = () => {
-    }
+
+
     return (
 
         <>  <div style={{ textAlign: "center" }}>
             <div style={{marginTop:"5px"}}><img src="https://th.thgim.com/static/theme/default/base/img/logo.png" alt="logo"></img></div>
             <div className={styles.heads}>GET UNLIMITED ACCESS TO QUALITY JOURNALISM. DELIVERING SINCE 1878</div>
-            <div className={styles.payment}>
-                <button onClick={handleOneTimePayment} className={styles.oneTime}>One Time Payment</button>
-                <button onClick={handleAutoRenewal} className={styles.auto}>Auto Renewal</button>
-            </div>
-            {/* <PaymentPage paymentType /> */}
 
-            {/* !paymentType ? ( */}
-            <div className={styles.section}>
+            {/* //button */}
+
+            <div className={styles.radioToggles}>
+                <input
+                className={styles.radio}
+                type="radio"
+                id="option-1"
+                name="radio-options"
+                />
+                <label  onClick={handlebtnClick} for="option-1">One Time Paymant</label>
+                <input  type="radio" id="option-2" name="radio-options" checked />
+                <label for="option-2">Auto Renewal</label>
+                <div className={styles.slideItem}></div>
+            </div>            
+           
+            {paymentType?(<div className={styles.section}>
                 <div className={styles.column1}>
                     <div className={styles.box}>
                         <p className={styles.desc}>1 year acces to TheHindu.com and all digital products of The Hindu.</p>
@@ -47,12 +62,7 @@ const Subscription = () => {
                     <button className={styles.btn3}>233/month</button>
                     <button type="button" className={styles.normal1}>Subscribe Now</button>
                 </div>
-            </div>
-            {/* ) : ( */}
-            {/* <div>
-                    <h1>Auto renaskdn</h1>
-                </div> */}
-            {/* ) */}
+            </div>):<Subscriptionparttwo/> }
 
         </div>
 

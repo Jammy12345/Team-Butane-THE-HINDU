@@ -1,0 +1,185 @@
+.normal{
+    width: 228.66px;
+    height: 35px;
+    margin: 50px 0px;
+    color: rgb(245, 122, 40);
+    background-color:#FFE388;
+    border: 1px solid #FFE388;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.normal1{
+    width: 228.66px;
+    height: 35px;
+    margin-top: 153px ;
+    color: white;
+    background-color:black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.normal1:hover{
+    background-color: white;
+    border: 1px solid black;
+    font-weight: bold;
+    color: black;
+}
+.normal:hover{
+    border: 1px solid black;
+    color: black;
+}
+.section {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+  }
+  
+.column1 {
+    background-color: #FAC399;
+    height: 500px;
+    border: 2px solid #D8967D;
+    border-radius: 10px;
+    margin: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+  .column2 {
+    background-color: #E6F9F9;
+    height: 500px;
+    border: 2px solid #A4D9FF;
+    border-radius: 10px;
+    margin: 15px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+  }
+  .heads{
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 21px 0.3px;
+  }
+  .desc{
+      padding: 5px;
+      font-size: 14px;
+  }
+  .box{
+      margin: 80px 7% 30px 7%;
+      width: 85%;
+      height: auto;
+      border-radius: 5px;
+      background-color: #FBC8A8;
+  }
+  .iimg{
+    /* margin-top: 100px; */
+    width: 228.66px;
+    height: 84.73px;
+    background: white; 
+    border-radius: 5px;
+  }
+  .btn1{
+      color:white;
+      background-color: black;
+      border: 1px solid black;
+      border-radius: 5px;
+      width: 100px;
+      font-size: 20px;
+      height: 35px;
+  }
+  .payment{
+      width:20%;
+      margin: 10px 39%;
+      display: flex;
+  }
+  .oneTime{
+      width: 150px;
+      border-radius: 20px;
+      padding: 3px;
+  }
+  .oneTime:hover{
+      color: white;
+      background-color: black;
+  }
+  .auto{
+    width: 150px;
+    border-radius: 20px;
+    padding: 3px;
+  }
+  .auto:hover{
+    color: white;
+    background-color: black;
+}
+.worth{
+    color: white;
+    margin: 10px auto;
+}
+.btn2{
+    color:black;
+    font-weight: bold;
+    background-color:white;
+    border: 1px solid white;
+    font-size: 18px;
+    padding: 7px 18px;
+    margin-top: 66px;
+}
+.price{
+    margin-top: 40px;
+}
+.btn3{
+    color:#479FC6;
+    font-weight: bold;
+    background-color:#DCEBF5;
+    border: 1px solid #DCEBF5;
+    font-size: 18px;
+    padding: 7px 18px;
+}
+
+
+
+
+
+.radioToggles {
+    align-items: center;
+    border: 1px solid lightgrey;
+    border-radius: 9999px;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 350px;
+    overflow: hidden;
+    position: relative;
+    color:white;
+  }
+  label {
+    cursor: pointer;
+    padding: 12px 18px;
+    text-align: center;
+    width: 50%;
+    z-index: 2;
+  }
+  .slideItem {
+    background: black;
+    border-radius: 9999px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+    height: calc(100% );
+    left: calc(50%);
+    position: absolute;
+    width: calc(50%);
+    transition: left 0.4s;
+    z-index: 0;
+    color:red;
+  }
+  input[type="radio"] {
+    left: -9999px;
+    position: absolute;
+    z-index: -1;
+  }
+  .radio:nth-of-type(1):checked ~ .slideitem {
+    left: 4px;
+  }
+  .radio:nth-of-type(2):checked ~ .slideitem {
+    left: calc(66.66%);
+  }
+  .radioToggles:checked+label{
+  color:red;
+  }

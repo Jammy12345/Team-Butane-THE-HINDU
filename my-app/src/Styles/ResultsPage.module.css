@@ -1,35 +1,34 @@
+
 .head {
     grid-area: header;
-    width: 60%;
-    height: 50px;
+    width: 53%;
     margin: 10px 10% 10px 10%;
     background-color:#E5E5E2;
+    padding:5px 0;
   }
   .head h2{
       float: left;
-      margin: 10px 5px 5px 5px;
-      font-size: 20px;
+      vertical-align: middle;
+      padding:8px 20px 0 20px;
+      font-size: 18px;
+      color:rgb(59, 59, 59);
+      margin: 0;
+      font-weight: 400;
   }
-  .head input{
-      height: 35px;
-      width: 60%;
-      margin-top: 5px;
-      font-size: 20px;
-      padding-left: 10px;
-      border: 1px solid white;
-  }
+  
   .content {
     width: 50%;
     height: auto;
     float:right;
     grid-area: content;
     margin-bottom: 10px;
-    border: 1px solid black;
   }
   .nav {
     float: left;
     grid-area: nav;
     background-color:#E5E5E2;
+    /* width: 60%;
+    height: 160vh; */
     width: 50%;
     height: auto;
     margin: 0px 0px 10px 40%;
@@ -47,6 +46,9 @@
       width: 90%;
       margin: 0px 2px;
 }
+ul>li{
+  padding:1px;
+}
 li button{
     text-align: left;
     margin-top: 10px;
@@ -55,6 +57,8 @@ li button{
     background-color: #E5E5E2;
     border: 1px solid #E5E5E2;
     color: #555555;
+    font-size:15px;
+    padding:5px 0;
 }
 .allCategory{
     background-color:#133B5A;
@@ -72,7 +76,10 @@ li button:hover{
   .inputDesign{
       border: 1px solid white;
       margin-top: 4px;
+      padding:7px;
   }
+
+  
 
   @media (min-width: 500px) {
     .wrapper {
@@ -99,4 +106,36 @@ li button:hover{
      nav ul {
        flex-direction: column;
      }
+  }
+  .sort{
+    display:flex;
+    justify-content: space-between;
+    
+  }
+  .sort>div>div{
+    display:inline;
+    padding: 0 5px;
+    
+  }
+  .sort>div>div:hover{
+    color: rgb(86, 86, 243);
+    cursor: pointer;
+  }
+
+  .mytextdiv{
+    margin-top: 15px;
+    display:flex;
+    flex-direction:row;
+     align-items: baseline;
+     
+  }
+  .mytexttitle{
+    padding-left: 10px;
+    flex-grow:0;
+  }
+  
+  .divider{
+    flex-grow:1;
+    height: 1px;
+    background-color: #9f9f9f;
   }

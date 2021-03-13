@@ -1,5 +1,5 @@
 import { fetchnews, fetchSingleNews, postNews } from "../../Utils/util"
-import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE } from "./ActionTypes"
+import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE,SEARCH_NEWS } from "./ActionTypes"
 import axios from "axios"
 
 
@@ -64,6 +64,13 @@ const loginfail=()=>{
     }
 }
 
+const searchnews=(payload)=>{
+    return{
+        type :SEARCH_NEWS,
+        payload
+    }
+}
+
 const postNewsRequest = () => {
     return {
         type: POST_NEWS_DATA
@@ -80,25 +87,6 @@ const postNewsSuccess = (payload) => {
 const postNewsFailure = () => {
     return {
         type : POST_NEWS_SUCCESS,
-    }
-}
-
-const postBookRequest = () => {
-    return {
-        type: POST_BOOK_DATA
-    }
-}
-
-const postBookSuccess = (payload) => {
-    return {
-        type : POST_BOOK_SUCCESS,
-        payload 
-    }
-}
-
-const postBookFailure = () => {
-    return {
-        type : POST_BOOK_FAILURE,
     }
 }
 
@@ -119,8 +107,9 @@ export const fetchReport = (id) => (dispatch) => {
     .then(res => dispatch(fetchSingleSuccess(res.data)))
     .catch(err => dispatch(fetchSingleFailure(err)))
 }
+
 export const auth=(payload)=>(dispatch)=>{
-    dispatch(loginrequest)
+    dispatch(fetchNewsRequest())
     const config={
         method:"post",
         url:"https://reqres.in/api/login",
@@ -132,13 +121,30 @@ export const auth=(payload)=>(dispatch)=>{
     } ).catch(()=>dispatch(loginfail))
 }
 
-export const postData = (id, payload) => (dispatch) => {
-    dispatch(postNewsRequest())
-    return postNews(id, payload)
-    .then((res) => {
-        dispatch(postNewsSuccess(res.data))
-    })
-    .catch((err) => dispatch(postNewsFailure(err)))
+export const fetchSearchNews=(payload)=>(dispatch)=>{
+    dispatch(fetchNewsRequest())                                //reusing for loading
+    const config={
+        method:"get",
+        url:"https://fake-server-ashutosh.herokuapp.com/news",
+        params:{
+            q:payload
+        }
+    }
+    axios(config).then(res=> {
+        console.log(res.data)
+        return dispatch(searchnews(res.data))
+        
+    } ).catch((err)=> console.log(err))
 }
+
+// dispatch(loginfail())
+// export const postData = (id, payload) => (dispatch) => {
+//     dispatch(postNewsRequest())
+//     return postNews(id, payload)
+//     .then((res) => {
+//         dispatch(postNewsSuccess(res.data))
+//     })
+//     .catch((err) => dispatch(postNewsFailure(err)))
+// }
 
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { shallowEqual, useDispatch, useSelector } from "react-redux";
 import { useHistory, useParams } from "react-router";
-import { fetchData, fetchReport, postData } from "../../Redux/News/Actions";
+import { fetchData, fetchReport } from "../../Redux/News/Actions";
 import { Footer } from "../Footer/Footer";
 import { Header } from "../Header/Header";
 import styles from "../../Styles/HinduNews.module.css";
@@ -33,7 +33,7 @@ const HinduNews = () => {
             ...report,
         };
         history.push(`/${id}`);
-        dispatch(postData(report.id, payload));
+        
     };
 
     return (

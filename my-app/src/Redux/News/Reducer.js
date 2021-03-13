@@ -5,8 +5,9 @@ import {
     FETCH_SINGLE_DATA,
     FETCH_SINGLE_FAILURE,
     FETCH_SINGLE_SUCCESS,
-    LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_NEWS_FAILURE, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE 
+    POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_NEWS_FAILURE, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE,SEARCH_NEWS 
 } from "./ActionTypes";
+
 import { saveData,loadData } from "../../Components/LocalstorageAuth";
 
 
@@ -23,6 +24,7 @@ const initialState = {
     isLoading : false,
     iserror : false,
 }
+
 
 export const newsReducer = (state = initState, { type, payload }) => {
     switch (type) {
@@ -65,6 +67,12 @@ export const newsReducer = (state = initState, { type, payload }) => {
                 loading: false,
                 error: true,
             };
+        }
+        case (SEARCH_NEWS):{
+            return{
+                ...state,
+                news:payload
+            }
         }
 
         default: {
