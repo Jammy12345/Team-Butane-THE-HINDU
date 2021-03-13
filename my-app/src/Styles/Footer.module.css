@@ -13,6 +13,7 @@
 }
 .footer_links img{
     width: 50%;
+    margin-left: 20%;
 }
 .footer_links ul{
     display: flex;

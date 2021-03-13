@@ -9,7 +9,9 @@ import { SideCard } from "../SideCard";
 import { NewsBox } from "./NewsBox";
 import { Region } from "./Region";
 import { BoxCard } from "../BoxCard";
-import { useHistory } from "react-router";
+import { useHistory } from "react-router-dom"
+import { SliderCard } from "../SliderCard"
+import Loader from "../Loader";
 
 const HomePage = () => {
     const news = useSelector((state) => state.app.news);
@@ -28,12 +30,12 @@ const HomePage = () => {
     }, [dispatch, category]);
 
     const handlePage = (id) => {
-        history.push(`/page/${id}`);
+        history.push(`/news/${id}`);
         console.log(id);
     };
 
     return loading ? (
-        <div>...loading</div>
+        <Loader/>
     ) : error ? (
         <div>Something went wrong</div>
     ) : (
@@ -147,6 +149,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            <SliderCard data = {news} handlePage={handlePage} />
         </div>
     );
 };

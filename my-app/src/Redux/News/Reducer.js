@@ -5,7 +5,7 @@ import {
     FETCH_SINGLE_DATA,
     FETCH_SINGLE_FAILURE,
     FETCH_SINGLE_SUCCESS,
-    LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS,SEARCH_NEWS
+    POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_NEWS_FAILURE, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE,SEARCH_NEWS 
 } from "./ActionTypes";
 
 import { saveData,loadData } from "../../Components/LocalstorageAuth";
@@ -48,27 +48,25 @@ export const newsReducer = (state = initState, { type, payload }) => {
                 error: true,
             };
         }
-        case (LOGIN_REQUEST):{
-            return{
+        case POST_BOOK_DATA: {
+            return {
                 ...state,
-                loading:true
-            }
+                loading: true,
+            };
         }
-        case (LOGIN_FAIL):{
-            return{
+        case POST_BOOK_SUCCESS: {
+            return {
+                ...state,
+                news: payload,
+                loading: false,
+            };
+        }
+        case POST_BOOK_FAILURE: {
+            return {
                 ...state,
                 loading: false,
-                error : true
-            }
-        }
-        case (LOGIN_SUCCESS):{
-            saveData("token",payload.token)
-            return{
-                ...state,
-                authEmail:"eve.holt@reqres.in",
-                loading: false,
-                error:false
-            }
+                error: true,
+            };
         }
         case (SEARCH_NEWS):{
             return{
@@ -105,6 +103,25 @@ export const reportReducer = (state = initialState, { type, payload }) => {
                 isError: true,
             };
         }    
+        case POST_NEWS_DATA: {
+            return {
+                ...state,
+                isLoading: true,
+            };
+        }
+        case POST_NEWS_SUCCESS: {
+            return {
+                ...state,
+                isLoading: false,
+            };
+        }
+        case POST_NEWS_FAILURE: {
+            return {
+                ...state,
+                isLoading: false,
+                isError: true,
+            };
+        }  
         default:{
             return state
         }

@@ -28,7 +28,7 @@ export const SideCard = ({data, category}) => {
             <div>
                 <img className={styles.CardImg} src={newData[newData.length-2].urlToImage} alt="ok"/>
             </div>
-        </BottomCard>
+        </BottomCard>   
         </div>
     )
 }

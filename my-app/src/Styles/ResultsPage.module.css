@@ -27,9 +27,10 @@
     float: left;
     grid-area: nav;
     background-color:#E5E5E2;
-    width: 60%;
-    
-    height: 160vh;
+    /* width: 60%;
+    height: 160vh; */
+    width: 50%;
+    height: auto;
     margin: 0px 0px 10px 40%;
   }
   .nav ul{

@@ -1,5 +1,5 @@
-import { fetchnews, fetchSingleNews } from "../../Utils/util"
-import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS,SEARCH_NEWS } from "./ActionTypes"
+import { fetchnews, fetchSingleNews, postNews } from "../../Utils/util"
+import { FETCH_NEWS_DATA, FETCH_NEWS_FAILURE, FETCH_NEWS_SUCCESS, FETCH_SINGLE_DATA, FETCH_SINGLE_FAILURE, FETCH_SINGLE_SUCCESS, LOGIN_REQUEST,LOGIN_FAIL,LOGIN_SUCCESS, POST_NEWS_DATA, POST_NEWS_SUCCESS, POST_BOOK_DATA, POST_BOOK_SUCCESS, POST_BOOK_FAILURE,SEARCH_NEWS } from "./ActionTypes"
 import axios from "axios"
 
 
@@ -30,6 +30,7 @@ const fetchSingleRequest = () => {
 }
 
 const fetchSingleSuccess = (payload) => {
+    console.log("working")
     return {
         type : FETCH_SINGLE_SUCCESS,
         payload 
@@ -37,6 +38,7 @@ const fetchSingleSuccess = (payload) => {
 }
 
 const fetchSingleFailure = () => {
+    console.log("working")
     return {
         type : FETCH_SINGLE_FAILURE,
     }
@@ -69,6 +71,27 @@ const searchnews=(payload)=>{
     }
 }
 
+const postNewsRequest = () => {
+    return {
+        type: POST_NEWS_DATA
+    }
+}
+
+const postNewsSuccess = (payload) => {
+    return {
+        type : POST_NEWS_SUCCESS,
+        payload 
+    }
+}
+
+const postNewsFailure = () => {
+    return {
+        type : POST_NEWS_SUCCESS,
+    }
+}
+
+
+
 
 export const fetchData = () => (dispatch) => {
     dispatch(fetchNewsRequest())
@@ -78,6 +101,7 @@ export const fetchData = () => (dispatch) => {
 }
 
 export const fetchReport = (id) => (dispatch) => {
+   
     dispatch(fetchSingleRequest())
     return fetchSingleNews(id)
     .then(res => dispatch(fetchSingleSuccess(res.data)))
@@ -114,3 +138,13 @@ export const fetchSearchNews=(payload)=>(dispatch)=>{
 }
 
 // dispatch(loginfail())
+// export const postData = (id, payload) => (dispatch) => {
+//     dispatch(postNewsRequest())
+//     return postNews(id, payload)
+//     .then((res) => {
+//         dispatch(postNewsSuccess(res.data))
+//     })
+//     .catch((err) => dispatch(postNewsFailure(err)))
+// }
+
+
