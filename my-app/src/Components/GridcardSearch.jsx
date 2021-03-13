@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 
 const GridcardSearchContainer =styled.div`
+    background-color: #fff;
     width:17vw;
     height:55vh;
     // border:1px solid;

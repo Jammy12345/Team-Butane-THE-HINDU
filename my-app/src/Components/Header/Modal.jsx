@@ -27,21 +27,21 @@ const Modal = ({ handlePop, display }) => {
             <div className={styles.allLinks}>
                 <div>
                     <Link to="">Subscripton</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Latest News</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Today's Paper</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">ePaper</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Housing</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Coupons</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
                 <div>
                     <Link to="">Crossword</Link>
-                    <span>----------------------------------------------</span>
+                    <span>---------------------------------------</span>
                     <br />
                     <Link to="">Cities</Link>
                     <p>bengaluru</p>
@@ -54,10 +54,10 @@ const Modal = ({ handlePop, display }) => {
                     <p>mangalore</p>
                     <p>vijayawada</p>
                     <p>vishakapatnam</p>
-                    <span>----------------------------------------------</span>
+                    <span>---------------------------------------</span>
                     <Link to="">Elections</Link>
                     <p>bihar</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
                 <div>
                     <Link to="">Opinion</Link>
@@ -69,7 +69,7 @@ const Modal = ({ handlePop, display }) => {
                     <p>interview</p>
                     <p>open page</p>
                     <p>letters</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Sport</Link>
                     <p>athletics</p>
                     <p>cricket</p>
@@ -79,7 +79,7 @@ const Modal = ({ handlePop, display }) => {
                     <p>other sports</p>
                     <p>races</p>
                     <p>tennis</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
                 <div>
                     <Link to="">Entertainment</Link>
@@ -89,18 +89,18 @@ const Modal = ({ handlePop, display }) => {
                     <p>reviews</p>
                     <p>music</p>
                     <p>theatre</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Society</Link>
                     <p>faith</p>
                     <p>history</p>
                     <p>culture</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Books</Link>
                     <p>reviews</p>
                     <p>authors</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Children</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
                 <div>
                     <Link to="">Life & Style</Link>
@@ -112,52 +112,52 @@ const Modal = ({ handlePop, display }) => {
                     <p>homes</p>
                     <p>gerden</p>
                     <p>luxury</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Technology</Link>
                     <p>gadgets</p>
                     <p>internet</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Sci-Tech</Link>
                     <p>science</p>
                     <p>technology</p>
                     <p>health</p>
                     <p>agriculture</p>
                     <p>environmnt</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
                 <div>
                     <Link to="">Education</Link>
                     <p>career</p>
                     <p>college</p>
                     <p>school</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Multimedia</Link>
                     <p>photos</p>
                     <p>videos</p>
                     <p>podcast</p>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Data</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Special</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Resources</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Tags</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">theRead</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Thratre-Fest</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">November-Fest</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Lit for life</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Tamil Nadu</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Smiling</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                     <Link to="">Newsletter</Link>
-                    <span>----------------------------------------------</span>
+                    <span>-----------------------------------</span>
                 </div>
             </div>
             <div className={styles.bottom_link}>

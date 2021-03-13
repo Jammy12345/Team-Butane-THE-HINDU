@@ -36,11 +36,11 @@ body{
 }
 
 .header_links svg{
-
     color: #828282;
-    font-size: 25px;
+    font-size: 29px;
     padding: 5px;
-    padding-left: 15px;
+    margin-right: 9px;
+    padding-left: 12px;
 }
 .header_links div:nth-child(2){
     position: relative;
@@ -54,6 +54,9 @@ body{
     border-right: 0;
     width: 220px;
     background: #f5f5f5;
+}
+.header_links input:focus{
+    outline: 0;
 }
 .header_links li{
     cursor: pointer;
@@ -260,6 +263,7 @@ button{
     z-index: 99999999999!important;
     overflow: scroll;
     text-align: left;
+    padding-top: 25px;
 }
 .modal .cross{
     display: flex;

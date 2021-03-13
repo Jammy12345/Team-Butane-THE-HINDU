@@ -23,10 +23,10 @@ const HeaderSocial = () => {
             <div>
                 <ul>
                     <li><FaFacebookF /></li>
-                    <li><FaTwitter /></li>
-                    <li><FaLinkedinIn /></li>
-                    <li><FaInstagram /></li>
-                    <li><FaFacebookMessenger /></li>
+                    <li><FaTwitter style = {{fontSize : "33px"}}/></li>
+                    <li><FaLinkedinIn style = {{fontSize : "33px"}}/></li>
+                    <li><FaInstagram style ={{fontSize : "33px"}}/></li>
+                    <li><FaFacebookMessenger style = {{fontSize : "33px"}}/></li>
                     <li><FaMobileAlt /></li>
                 </ul>               
             </div>

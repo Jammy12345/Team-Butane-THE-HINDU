@@ -63,7 +63,7 @@ const ResultsPage = () => {
 
 
     const Eachnews=(id)=>{
-        history.push(`/page/${id}`);
+        history.push(`/news/${id}`);
     }
 
    

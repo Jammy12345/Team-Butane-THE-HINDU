@@ -39,12 +39,13 @@ a:hover{
     color: white;
     font-size: 20px;
     margin-top: 9px;
+    margin-left: 9px;
     font-weight: bolder;
 }
 .burger_flex h5{
     position: absolute;
     left: 50px;
-    top: -30px;
+    top: -18px;
     font-size: 22px;
     line-height: 24px;
     font-family: 'Fira Sans',sans-serif;

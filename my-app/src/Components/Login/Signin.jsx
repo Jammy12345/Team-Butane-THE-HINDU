@@ -49,6 +49,13 @@ const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
+  topo:{
+    wisth: 0
+  },
+  label: {
+    padding: 0,
+    width: 50
+  }
 }));
 
 const initState = {
@@ -92,7 +99,7 @@ const SignIn = () => {
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
-            variant="outlined"
+            variant="standard"
             margin="normal"
             required
             fullWidth
@@ -104,8 +111,8 @@ const SignIn = () => {
             onChange={handleChange}
             value={details.email}
           />
-          <TextField
-            variant="outlined"
+          <TextField className = {classes.topo}
+            variant="standard"
             margin="normal"
             required
             fullWidth

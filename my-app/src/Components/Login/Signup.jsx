@@ -105,11 +105,11 @@ const SignUp = () => {
         </Typography>
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
                 autoComplete="fname"
                 name="name"
-                variant="outlined"
+                variant="standard"
                 required
                 fullWidth
                 id="firstName"
@@ -119,9 +119,9 @@ const SignUp = () => {
                 value={details.name}
               />
             </Grid>
-            <Grid item xs={12} sm={6}>
+            <Grid item xs={12}>
               <TextField
-                variant="outlined"
+                variant="standard"
                 required
                 fullWidth
                 id="UserName"
@@ -134,7 +134,7 @@ const SignUp = () => {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                variant="outlined"
+                variant="standard"
                 required
                 fullWidth
                 id="email"
@@ -147,7 +147,7 @@ const SignUp = () => {
             </Grid>
             <Grid item xs={12}>
               <TextField
-                variant="outlined"
+                variant="standard"
                 required
                 fullWidth
                 name="password"
