@@ -32,7 +32,7 @@ const HinduNews = () => {
         const payload = {
             ...report,
         };
-        history.push(`/${id}`);
+        history.push(`/news/${id}`);
         
     };
 

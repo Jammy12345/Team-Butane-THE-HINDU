@@ -94,7 +94,6 @@
     align-items: flex-start;
     justify-content: space-between;
     margin: 0 auto;
-    border: 1px solid black;
 }
 .all_news_div{
     display: flex;

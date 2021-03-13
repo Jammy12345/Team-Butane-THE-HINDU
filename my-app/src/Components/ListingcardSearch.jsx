@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 
 const ListingcardSearchContainer=styled.div`
+    background: #fff;
     width:36.5vw;
     height:128px;
     display:flex;
