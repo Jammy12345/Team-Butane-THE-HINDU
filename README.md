@@ -29,8 +29,8 @@ To run the thehindu.com clone locally,
     ## `npm react-router-dom react-redux @material-ui/core @material-ui/icons react-leaf-carousal semantic-ui-react semantic-ui-css`
     ### `npm start`
 4.  Login Signup Features works perfect so go ahead by creating new account or you can login in using one of our teammate's user id. 
-    user id : ashutosh@gmail.com
-    password : password
+    ###user id : ashutosh@gmail.com
+    ###password : password
 4.  Load the website and here are the functionalities which we have made available through which you can visit the following websites:
     1. Home page
     2. Dashboard
