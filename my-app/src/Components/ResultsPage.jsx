@@ -32,7 +32,9 @@ const ResultsPage = () => {
         listing:true
     }
     
+    const {searchInput} =useParams()
     const [view,setView]=React.useState(initView)
+    const [inputChange, setInputChange] = React.useState(searchInput);
 
 
     const handleGrid=()=>{
@@ -48,10 +50,14 @@ const ResultsPage = () => {
             listing:true
         })
     }
+
+    const handleChange = (e) => {
+        setInputChange(e.target.value)
+    }
     
 
     
-    const {searchInput} =useParams()
+
     const dispatch=useDispatch()
 
 
@@ -80,7 +86,7 @@ const ResultsPage = () => {
                 <div className={styles.wrapper}>
                     <header className={styles.head}>
                         <h2>Your Search</h2>
-                        <Input  value={searchInput} action={{ icon: 'search' }} placeholder='Search...' />
+                        <Input onChange = {(e) => handleChange(e)} value = {inputChange} action={{ icon: 'search' }} placeholder='Search...' />
 
                     </header>
                     <nav className={styles.nav}>

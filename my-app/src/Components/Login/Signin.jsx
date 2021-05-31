@@ -48,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    height: "40px",
+    fontSize: "18px"
+  },
+  input:{
+    width: "100%",
+    fontSize: "25px"
+  },
+  question:{
+    fontSize: "16px"
   },
   topo:{
     wisth: 0
@@ -104,7 +113,7 @@ const SignIn = () => {
             required
             fullWidth
             id="email"
-            label="Email Address"
+            placeholder="Email Address"
             name="email"
             autoComplete="email"
             autoFocus
@@ -117,7 +126,7 @@ const SignIn = () => {
             required
             fullWidth
             name="password"
-            label="Password"
+            placeholder="Password"
             type="password"
             id="password"
             autoComplete="current-password"
@@ -136,7 +145,7 @@ const SignIn = () => {
           </Button>
           <Grid container>
             <Grid item>
-              <Link href="/signup" variant="body2">
+              <Link className = {classes.question} href="/signup" variant="body2">
                 {"Don't have an account? Sign Up"}
               </Link>
             </Grid>

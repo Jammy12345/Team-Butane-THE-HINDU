@@ -1,13 +1,15 @@
 .container{
-    height: fit-content;
-    width: 280px;
+    height: 350px;
+    width: 340px;
     background-color: rgb(37, 86, 122);
     color:#ffffff;
     padding: 0;
+    overflow: hidden;
 }
 .heading{
     font-weight: bolder;
     font-size: 18px;
+    text-decoration: none;
     border-bottom:1.5px dashed #c4c3c3;
     padding:15px 7px; 
     margin-top:0;
@@ -20,17 +22,13 @@
     padding: 0 8px 35px 8px;
 }
 .CardImg{
-    height:65%;
-    padding:7px 7px 
+    width: 100%;
+    margin-top: 20px;
 }
 
 .CardContent{
     
     padding: 0 8px 25px 8px;
-}
-.CardImg{
-    height:40%;
-    width: 100%;
 }
 
 .TriangleRight{
@@ -51,7 +49,7 @@
     border-bottom-width: 5px;
     border-right: 7px solid #ffffff;
     position: relative;
-    left:272.5px;
+    left:333px;
     top:-17px;
     
 }

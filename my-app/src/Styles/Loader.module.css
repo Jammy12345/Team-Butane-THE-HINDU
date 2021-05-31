@@ -1,7 +1,9 @@
 .loader {
     border: 16px solid #f3f3f3;
     border-radius: 50%;
-    margin: 25% 45%;
+    /* margin: 25% 45%; */
+    margin: 35vh auto;
+
     border-top: 16px solid #3498db;
     width: 120px;
     height: 120px;
@@ -14,15 +16,15 @@
     left: 0;
     right: 0;
     bottom: 0;
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background: black;
     opacity: .8;
     z-index: 999999999999;
   }
   .container{
-    margin-left: 15%;
-    margin-top: 3%;
+    /* margin-left: 15%;
+    margin-top: 3%; */
   }
   @-webkit-keyframes spin {
     0% {

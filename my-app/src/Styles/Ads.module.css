@@ -1,0 +1,14 @@
+
+.main img:nth-child(1){
+    position: fixed;
+    position: -webkit-sticky;
+    left: 10px;
+    top: 10px;
+    height: 95vh;
+}
+.main img:nth-child(2){
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 95vh;
+}

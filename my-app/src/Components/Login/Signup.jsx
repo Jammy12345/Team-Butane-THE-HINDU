@@ -45,11 +45,20 @@ const useStyles = makeStyles((theme) => ({
   },
   form: {
     width: '100%', // Fix IE 11 issue.
-    marginTop: theme.spacing(3),
+    marginTop: theme.spacing(2),
   },
   submit: {
     margin: theme.spacing(3, 0, 2),
+    height: "40px",
+    fontSize: "18px"
   },
+  input:{
+    width: "100%",
+    fontSize: "25px",
+  },
+  question:{
+    fontSize: "16px"
+  }
 }));
 
 const initState = {
@@ -106,14 +115,13 @@ const SignUp = () => {
         <form className={classes.form} noValidate>
           <Grid container spacing={2}>
             <Grid item xs={12}>
-              <TextField
+              <TextField className = {classes.input}
                 autoComplete="fname"
                 name="name"
                 variant="standard"
                 required
-                fullWidth
                 id="firstName"
-                label="Name"
+                placeholder="Name"
                 autoFocus
                 onChange={handleChange}
                 value={details.name}
@@ -125,7 +133,7 @@ const SignUp = () => {
                 required
                 fullWidth
                 id="UserName"
-                label="User Name"
+                placeholder="User Name"
                 name="username"
                 onChange={handleChange}
                 value={details.username}
@@ -138,7 +146,7 @@ const SignUp = () => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                placeholder="Email Address"
                 name="email"
                 onChange={handleChange}
                 value={details.email}
@@ -146,12 +154,13 @@ const SignUp = () => {
               />
             </Grid>
             <Grid item xs={12}>
-              <TextField
+              <TextField className = {classes.input}
                 variant="standard"
                 required
-                fullWidth
+                margin = "dense"
+                dense
                 name="password"
-                label="Password"
+                placeholder="Password"
                 type="password"
                 id="password"
                 value={details.password}
@@ -160,7 +169,7 @@ const SignUp = () => {
               />
             </Grid>
           </Grid>
-          <Button
+          <Button 
             type="submit"
             fullWidth
             variant="contained"
@@ -172,7 +181,7 @@ const SignUp = () => {
           </Button>
           <Grid container justify="flex-end">
             <Grid item>
-              <Link href="/signin" variant="body2">
+              <Link className = {classes.question} href="/signin" variant="body2">
                 Already have an account? Sign in
               </Link>
             </Grid>

@@ -6,7 +6,7 @@ import { GrFormClock } from "react-icons/gr";
 import styles from "../Styles/SliderCard.module.css";
 
 const Slider = styled.div`
-    width: 80%;
+    width: 70%;
     padding: 0 3%;
     backgound: red;
     height: fit-content;
@@ -71,17 +71,24 @@ export const SliderCard = ({ data, handlePage }) => {
                 <InfiniteCarousel
                     breakpoints={[
                         {
-                            breakpoint: 400,
+                            breakpoint: 1300,
                             settings: {
-                                slidesToShow: 5,
-                                slidesToScroll: 5,
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
                             },
                         },
                         {
-                            breakpoint: 500,
+                            breakpoint: 1104,
                             settings: {
                                 slidesToShow: 3,
-                                slidesToScroll: 3,
+                                slidesToScroll: 1,
+                            },
+                        },
+                        {
+                            breakpoint: 800,
+                            settings: {
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
                             },
                         },
                     ]}

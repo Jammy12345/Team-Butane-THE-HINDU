@@ -26,7 +26,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
             <div>
                 <Link to = "" >HOME</Link>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>NEWS</span>
                 
                 <ul>
@@ -37,7 +37,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
                     <li>CITIES</li>
                 </ul>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>ELECTIONS</span>
                 <ul>
                 <span className = {styles.arrow}></span>
@@ -50,7 +50,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
                     <li>PUNJAB</li>
                 </ul>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>OPINION</span>
                 <ul>
                 <span className = {styles.arrow}></span>
@@ -63,7 +63,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
                     <li>LETTERS</li>
                 </ul>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>BUSINESS</span>
                 <ul>
                 <span className = {styles.arrow}></span>
@@ -74,7 +74,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
                     <li>STOCK QUOTES</li>
                 </ul>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>SPORTS</span>
                 <ul>
                 <span className = {styles.arrow}></span>
@@ -87,7 +87,7 @@ const isAuth = useSelector((state) => state.auth.isAuth);
                     <li>OTHERS</li>
                 </ul>
             </div>
-            <div>
+            <div className = {styles.news_link}>
                 <span>CROSSWORD</span>
             </div>
             <div className = {styles.dash}>

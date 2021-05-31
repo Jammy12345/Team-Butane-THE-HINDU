@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 80%;
+    width: 70%;
+    min-width: 10px;
     margin: 0 auto;
     border-top: 1px solid #7e7c76;
     border-bottom: 1px solid #828282;
@@ -31,7 +32,10 @@
     color: #828282;
     font-size: 25px;
     padding: 5px;
+    /* position: absolute; */
+    right: 90px;
 }
+
 .footer_links div:nth-child(2){
     position: relative;
 }
@@ -39,6 +43,7 @@
     margin: 0;
     padding: 5px;
     border: 1px solid #828282;
+    position: relative;
     border-bottom: 0;
     border-top: 0;
     border-right: 0;
@@ -52,7 +57,7 @@
     background: none;
     border: none;
     position: absolute;
-    right: 150px;
+    right: 225px;
     font-size: 14px;
     font-weight:900;
     color: black;
@@ -70,9 +75,9 @@
 }
 .links{
     border-top: 1px solid #7e7c76;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
     background: #f5f5f5;
     padding-top: 1%;
     padding-bottom: 1%;
@@ -86,7 +91,7 @@
 .the_site p{
     letter-spacing: -.09px;
     text-transform: uppercase;
-    font-size: 11.5px;
+    font-size: 13px;
     line-height: 12px;
     color: #144d94;
     margin: 0;
@@ -96,7 +101,7 @@
     color: #7e7c76;
     padding: 0 7px;
     border-right: 1px solid #7e7c76;
-    font-size: 11.5px;
+    font-size: 13px;
     line-height: 15px;
     letter-spacing: -.09px;
 }
@@ -116,7 +121,7 @@
     text-align: center;
 }
 .trendings{
-    width: 76%;
+    width: 70%;
     text-align: left;
     display: flex;
     align-items: flex-start;
