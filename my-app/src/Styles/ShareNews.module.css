@@ -1,0 +1,21 @@
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 5% 0;
+}
+.main svg, .print svg{
+    font-size: large;
+}
+.main > div:nth-child(even){
+    color: darkgray;
+}
+.main > div{
+    cursor: pointer;
+}
+.print{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60px;
+}

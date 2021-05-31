@@ -6,7 +6,7 @@ body{
 }
 .main{
     background: #f5f5f5;
-    width: 80%;
+    width: 70%;
     margin: 0 auto;
 }
 .main img{
@@ -55,6 +55,9 @@ body{
     width: 220px;
     background: #f5f5f5;
 }
+.news_link{
+    display: block;
+}
 .header_links input:focus{
     outline: 0;
 }
@@ -102,9 +105,10 @@ body{
     justify-content: flex-start;
     padding-top:.2%;
     height: fit-content;
-    width: 80%;
+    width: 71.5%;
     margin: 0 auto;
     position: sticky;
+    margin-left: 225px;
     top: 0;
     z-index: 999999;
     border-bottom: 1px solid #828282;
@@ -369,4 +373,10 @@ button{
 }
 .bottom_link li{
     margin-left: 5%;
+}
+
+@media screen  and (max-width: 800px){
+    .news_link{
+        display: none;
+    }
 }

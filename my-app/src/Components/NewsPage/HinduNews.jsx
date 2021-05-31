@@ -9,6 +9,7 @@ import { NewsData } from "./NewsData";
 import { BoxCard } from "../BoxCard";
 import { SliderCard } from "../SliderCard"
 import Loader from "../Loader";
+import { Ads } from "../Ads";
 
 const HinduNews = () => {
     const [load, setLoad] = useState(true);
@@ -39,6 +40,7 @@ const HinduNews = () => {
     return (
         <>
             <Header />
+            <Ads />
             {loading && <Loader/>}
             {!loading && !isLoading && !load && news.length !== 0 && (
                 <>

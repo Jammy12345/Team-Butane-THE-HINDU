@@ -39,6 +39,7 @@ const HomePage = () => {
     ) : error ? (
         <div>Something went wrong</div>
     ) : (
+        // 
         <div>
             {news.length !== 0 && (
                 <div className={styles.news_div}>
