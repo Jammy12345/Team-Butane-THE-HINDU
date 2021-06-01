@@ -1,21 +1,20 @@
 import React, { useState} from "react";
 import { useHistory } from "react-router";
-// import { Button, Card, ListGroup, ListGroupItem } from "react-bootstrap";
 
 import styles from "../Styles/Subscribtion.module.css";
 import { Subscriptionparttwo } from "./Subscriptionparttwo";
 
+// Subscription page
 const Subscription = () => {
-    const [paymentType, setPaymentType] = React.useState(true);
+    const [paymentType, setPaymentType] = React.useState(true)
+    const [state, setState] = useState("left");
     const history = useHistory()
+    const color = state === "right" ? "black" : "white";
+    const col = state === "left" ? "black" : "white"
 
     const handlebtnClick = () => {
         setPaymentType(!paymentType);
     };
-
-    const [state, setState] = useState("left");
-    const color = state === "right" ? "black" : "white";
-    const col = state === "left" ? "black" : "white"
 
     const handleRedirect = () => {
         history.push("/dashboard")
@@ -35,21 +34,6 @@ const Subscription = () => {
                     GET UNLIMITED ACCESS TO QUALITY JOURNALISM. DELIVERING SINCE
                     1878
                 </div>
-
-                {/* //button */}
-
-                {/* <div className={styles.radioToggles}>
-                <input
-                className={styles.radio}
-                type="radio"
-                id="option-1"
-                name="radio-options"
-                />
-                <label  onClick={handlebtnClick} for="option-1">One Time Paymant</label>
-                <input  type="radio" id="option-2" name="radio-options" checked />
-                <label for="option-2">Auto Renewal</label>
-                <div className={styles.slideItem}></div>
-            </div>             */}
                 <div className={styles.radioToggles}>
                     <input
                         className={styles.radio}
@@ -57,7 +41,6 @@ const Subscription = () => {
                         id="option-1"
                         name="radio-options"
                         onChange={() => setState("left")}
-                        // onChange={console.log("change")}
                     />
                     <label onClick={handlebtnClick} for="option-1" style={{ color: color }}>
                         One Time Paymant

@@ -4,6 +4,8 @@ import styles from "../Styles/NewsBox.module.css";
 const BoxCard = ({data, handlePage}) => {
     const max = data.length-1
     const newData = data[Math.floor(Math.random() * 50 % max)]
+
+    // Recomanded news
     return (
         <div className = {styles.box_card} onClick = {() => handlePage(newData.id)}>
             <img src={newData.urlToImage} alt=""/>
@@ -11,5 +13,6 @@ const BoxCard = ({data, handlePage}) => {
             <span>RECOMMENDED BY THE HINDU</span>
         </div>
     )
-}
+};
+
 export {BoxCard}

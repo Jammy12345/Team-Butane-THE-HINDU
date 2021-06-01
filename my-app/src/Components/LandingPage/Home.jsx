@@ -6,8 +6,6 @@ import { Ads } from '../Ads'
 
 export const Home = () => {
 
-
-
     return (
         <div>
             <Header/>

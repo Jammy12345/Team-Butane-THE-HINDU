@@ -10,11 +10,13 @@ const HeaderSocial = () => {
     const [searchInput,setsearchInput]=React.useState("")
 
 
+    // Search of the news when user click on search button on the header
     const handleSubmit=(e)=>{
         e.preventDefault()
         history.push(`/search/q/${searchInput}`)
     }
 
+    // Takes up query when user writes something in input field on header 
     const handleChange=(e)=>{
         setsearchInput(e.target.value)
     }

@@ -1,7 +1,9 @@
-
+.main{
+  margin-left: 80px;
+}
 .head {
     grid-area: header;
-    width: 53%;
+    width: 58%;
     margin: 10px 10% 10px 10%;
     background-color:#E5E5E2;
     padding:5px 0;
@@ -17,7 +19,7 @@
   }
   
   .content {
-    width: 50%;
+    width: 60%;
     height: auto;
     float:right;
     grid-area: content;
@@ -27,8 +29,6 @@
     float: left;
     grid-area: nav;
     background-color:#E5E5E2;
-    /* width: 60%;
-    height: 160vh; */
     width: 60%;
     height: auto;
     margin: 0px 0px 10px 40%;

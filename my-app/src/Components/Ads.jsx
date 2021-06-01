@@ -6,7 +6,6 @@ import pharmacy from "../Images/pharmacy.png"
 import property from "../Images/property.png"
 import sathya from "../Images/sathya.jpeg"
 import scooter from "../Images/scooter.jpeg"
-
 import styles from "../Styles/Ads.module.css"
 
 
@@ -17,6 +16,7 @@ const Ads = () => {
     const [pic, setPic] = useState(images[1]);
     let max = images.length-1
 
+    // Changes the ads at particular interval
     useEffect(() => {
         setInterval(() => {
             let num = Math.floor(Math.random() * max)
@@ -25,6 +25,7 @@ const Ads = () => {
             setPic(images[num2])
         }, 10000);
     }, []);
+
 
     return (
         <div className = {styles.main}>

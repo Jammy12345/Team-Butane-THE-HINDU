@@ -4,46 +4,57 @@ import styles from "../../Styles/Comments.module.css";
 import { Button } from "@material-ui/core";
 import CommentCard from "./CommentCard";
 import { FaBookmark } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { postBookmark, postComment } from "../../Utils/util";
+import { v4 as uuidv4 } from 'uuid';
 
-const Comment = ({ user, auth }) => {
+const Comment = React.memo(({ user, auth, data}) => {
     const history = useHistory()
     const [comm, setComm] = useState([]);
-    const [comment, setComment] = useState("");
-    const [color, setColor] = useState("");
+    const [comments, setComments] = useState(data.comments);
+    const [bookmarked, setBookmarked] = useState(data.bookmark);
+    const dispatch = useDispatch()
 
     const handleLogin = () => {
         history.push("/signin")
     };
 
-    const handleComments = () => {
-        const payload = {
-            name : user,
-            date : new Date().toLocaleDateString(),
-            comment : comment
-        }
-        if(comm.length !== 0){
-            setComm([...comm, payload])
-        } else {
-            setComm([payload])
-        }
+    const handleClick = (e) => {
+        setComm(e.target.value)
     }
+
+    const handleComments = (comment) => {
+
+        const payload = {
+            id: uuidv4(),
+            name: user,
+            date: new Date().toLocaleDateString(),
+            comment: comment,   
+        };
+        data.comments = [payload, ...data.comments]
+        setComments([payload,...comments])
+        postComment(data)
+    };
 
     const handleChange = () => {
-        setColor("skyblue")
+        data.bookmark = !data.bookmark
+        setBookmarked(!bookmarked)
+        postBookmark(data)
     }
 
-    const handleClick = (e) => {
-      let a =  e.target.value
-      setComment(a)
+    const handleDelete = (id) => {
+        let newComments = comments.filter((e) => e.id !== id)
+        setComments(newComments)
+        data.comments = (newComments)
+        postComment(data)
     }
-
+    
     return (
         <div className={styles.comment_main}>
-            {console.log("a")}
             <div>
                 <div className = {styles.bookmarks}>
-                    <h4>{`Comments (${comm.length})`}</h4>
-                    <FaBookmark onClick = {handleChange} color = {color} size = "25px"/>
+                    <h4>{`Comments (${comments.length})`}</h4>
+                    <FaBookmark onClick = {handleChange} color = {bookmarked? "skyblue": null} size = "25px"/>
                 </div>
             </div>
             <div>
@@ -52,7 +63,7 @@ const Comment = ({ user, auth }) => {
                     onChange = {(e) => handleClick(e)}
                      type="text" />
                     {auth ? (
-                        <Button onClick = {handleComments}
+                        <Button onClick = {() => handleComments(comm)}
                         variant="contained" color="secondary">
                             Post
                         </Button>
@@ -67,9 +78,9 @@ const Comment = ({ user, auth }) => {
                     )}
                     <div>
                         {
-                            comm.length !== 0 &&
-                            comm?.map((e, i) => (
-                                <CommentCard id = {i} {...e}/>
+                            comments.length !== 0 &&
+                            comments?.map((e, i) => (
+                                <CommentCard id = {i} {...e} user = {user} handleDelete = {handleDelete}/>
                             ))
                         }
                     </div>
@@ -98,6 +109,6 @@ const Comment = ({ user, auth }) => {
             </div>
         </div>
     );
-};
+});
 
 export { Comment };

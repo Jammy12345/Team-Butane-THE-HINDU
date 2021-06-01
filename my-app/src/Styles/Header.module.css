@@ -105,10 +105,9 @@ body{
     justify-content: flex-start;
     padding-top:.2%;
     height: fit-content;
-    width: 71.5%;
+    width: 70%;
     margin: 0 auto;
     position: sticky;
-    margin-left: 225px;
     top: 0;
     z-index: 999999;
     border-bottom: 1px solid #828282;
@@ -201,8 +200,7 @@ button{
     cursor: pointer;
 }
 .dash{
-    margin-left: 6%!important;
-    min-width: 36%;
+    min-width: 34%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -211,12 +209,13 @@ button{
     margin: 0 1%;
 }
 .header_news .dash .newspaper svg{
-    font-size: 45px;
+    font-size: 50px;
+    padding-top: 5px;
     color: #144d94;
     cursor: pointer;
 }
 .dash div:nth-child(2) button{
-    padding: 8px 12px;
+    padding: 9px 12px;
     background-color: #ffc000;
     border-radius: 5px;
     border: none;

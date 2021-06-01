@@ -3,10 +3,13 @@ import styles from "../Styles/NewsBox.module.css"
 
 const AllNewsCard = ({data, category, handlePage}) => {
     const [newData, setNewData] = useState(data);
+
     useEffect(() => {
         const news = data.filter((e) => e.category === category)
         setNewData(news)
     }, []);
+
+    // component on the left below select tag
     return (
         <div className = {styles.all_news_div}>
             <div className = {styles.all_news_left} onClick = {() => handlePage(newData[0].id)}>

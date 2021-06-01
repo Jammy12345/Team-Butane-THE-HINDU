@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router'
 import styled from 'styled-components'
 import { fetchSearchNews } from '../Redux/News/Actions'
+import { Ads } from './Ads'
 import { GridcardSearch } from './GridcardSearch'
 import { ListingcardSearch } from './ListingcardSearch'
 
@@ -41,9 +42,11 @@ export const Searchnews = () => {
     
    
     return (
+        <>
             <GridConainer>
                 {news && news.map((el,i)=><GridcardSearch key={i} data={el} />)}
             </GridConainer>
+        </>
 
     )
 }

@@ -12,27 +12,26 @@
 }
 .report_main_div{
     background: white;
-    width: 750px;
+    width: 640px;
     text-align: left;
 }
 .report_top{
-    width: 750px;
+    width: 640px;
     background: #113a59;
     padding: 25px 10px 65px 10px;
 }
 .report_top h4{
     font-family: "Fira Sans",sans-serif!important;
-    line-height: 36px;
+    line-height: 35px!important;
     letter-spacing: -.5px;
     font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
+    font-size: 26px;
     font-family: "Fira Sans",sans-serif;
     color: white;
 }
 .abs_report{
     background: white;
-    width: 730px;
+    width: 640px;
     padding: 5px 10px 15px 10px;
 }
 .abs_report h1{
@@ -42,7 +41,7 @@
     padding: 15px 30px 0;
     line-height: 36px;
     letter-spacing: -.5px;
-    font-size: 28px;
+    font-size: 23px;
     margin: 0;
 }
 /* .abs_report div:nth-child(1){
@@ -54,7 +53,7 @@
     background: white;
 } */
 .abs_report img{
-    width: 740px;
+    width: 635px;
 }
 .abs_report p{
     text-align: left;
@@ -62,7 +61,7 @@
     font-size: 18px;
     color: #282828;
     line-height: 30px;
-    width: 680px;
+    width: 620px;
     padding: 10px;
     font-weight: normal!important;
     font-style: normal!important;

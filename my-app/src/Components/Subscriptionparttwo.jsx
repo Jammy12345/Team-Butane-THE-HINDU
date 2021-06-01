@@ -74,7 +74,7 @@ const CardContainer=styled.div`
     }
 `
 
-
+// Subscription second page
 export const Subscriptionparttwo = () => {
     return (
         <Subs>

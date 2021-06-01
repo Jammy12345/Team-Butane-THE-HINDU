@@ -7,15 +7,14 @@ import { Header } from "../Header/Header";
 import styles from "../../Styles/HinduNews.module.css";
 import { NewsData } from "./NewsData";
 import { BoxCard } from "../BoxCard";
-import { SliderCard } from "../SliderCard"
+import { SliderCard } from "../SliderCard";
 import Loader from "../Loader";
-import { Ads } from "../Ads";
 
-const HinduNews = () => {
+const HinduNews = React.memo(() => {
     const [load, setLoad] = useState(true);
     const report = useSelector((state) => state.news.report, shallowEqual);
-    const { loading, news, error } = useSelector((state) => state.app);
-    const {isAuth, username } = useSelector(state => state.auth)
+    const { loading, news } = useSelector((state) => state.app);
+    const { isAuth, username } = useSelector((state) => state.auth);
     const isLoading = useSelector(
         (state) => state.news.isLoading,
         shallowEqual
@@ -24,29 +23,30 @@ const HinduNews = () => {
     const dispatch = useDispatch();
     const history = useHistory();
 
+    // Geting news from Api
     useEffect(() => {
         dispatch(fetchReport(id));
         dispatch(fetchData());
         setLoad(false);
     }, [id]);
+
+    // Goes to new news page when user clicks on the news
     const handlePage = (id) => {
-        const payload = {
-            ...report,
-        };
         history.push(`/news/${id}`);
-        
     };
 
     return (
         <>
+            {/* Headers */}
             <Header />
-            <Ads />
-            {loading && <Loader/>}
+            {loading && <Loader />}
             {!loading && !isLoading && !load && news.length !== 0 && (
                 <>
                     <div className={styles.container}>
-                        <NewsData data={report} user = {username} auth = {isAuth}/>
+                        {/* Main news container */}
+                        <NewsData data={report} user={username} auth={isAuth} />
                         <div className={styles.right_contain}>
+                            {/* Recommanded news */}
                             <div>
                                 <BoxCard data={news} handlePage={handlePage} />
                             </div>
@@ -60,7 +60,7 @@ const HinduNews = () => {
                                 <BoxCard data={news} handlePage={handlePage} />
                             </div>
                             <div>
-                                <BoxCard data={news} handlePage={handlePage}/>
+                                <BoxCard data={news} handlePage={handlePage} />
                             </div>
                             <div>
                                 <BoxCard data={news} handlePage={handlePage} />
@@ -72,13 +72,14 @@ const HinduNews = () => {
                     </div>
                 </>
             )}
-            {
-            !loading && !isLoading && !load && news.length !== 0 && 
-                <SliderCard data = {news} handlePage = {handlePage} />
-            }
+            {/* corousel */}
+            {!loading && !isLoading && !load && news.length !== 0 && (
+                <SliderCard data={news} handlePage={handlePage} />
+            )}
+            {/* Footer */}
             <Footer />
         </>
     );
-};
+});
 
 export { HinduNews };

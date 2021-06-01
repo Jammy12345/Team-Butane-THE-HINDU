@@ -8,19 +8,10 @@ import {
     FaEnvelope,
 } from "react-icons/fa";
 import { AiFillPrinter } from "react-icons/ai";
-import {
-    FacebookShareCount,
-    FacebookShareButton,
-    HatenaShareCount,
-    OKShareCount,
-    PinterestShareCount,
-    RedditShareCount,
-    TumblrShareCount,
-    VKShareCount,
-} from "react-share";
 
-const ShareNews = ({ handlePrint, handleFacebook, handleSize, fontSize }) => {
-    // onClick = {handleFacebook}><FaFacebookF color = "#34B7F1"/>
+// Share News Component
+const ShareNews = ({ handlePrint, handleSize, fontSize }) => {
+
     return (
         <div className={styles.main}>
             <div>SHARE ARTICLE</div>
@@ -39,7 +30,6 @@ const ShareNews = ({ handlePrint, handleFacebook, handleSize, fontSize }) => {
             <div>|</div>
             <div>
                 <FaFacebookF color="#34B7F1" />
-                <FacebookShareButton url={"www.google.com"} />
             </div>
             <div>|</div>
             <div>

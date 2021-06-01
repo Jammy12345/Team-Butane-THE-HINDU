@@ -7,20 +7,27 @@ import { useSelector } from 'react-redux';
 const HeaderNews = ({handlePop}) =>{
 const username = useSelector((state) => state.auth.username) 
 const isAuth = useSelector((state) => state.auth.isAuth);
+const history=useHistory()
 
-    const history=useHistory()
+    // Takes on subscribe page when user click on subscribe button
     const handleSubscribe=()=>{
         history.push("/subscribe")
     }
+
+    // Takes on sign in page when user click on sign in button
     const handleSignin=()=>{
         history.push("/signin")
     }
+
+    // Takes on dashboard page when user click on sign in button
     const handleRedirect = () => {
         history.push("/dashboard");
     }
+
     return (
         <div className = {styles.header_news}>
             <div>
+                {/* Opens up popUp navbar */}
                 <FaBars onClick = {handlePop}/>
             </div>
             <div>

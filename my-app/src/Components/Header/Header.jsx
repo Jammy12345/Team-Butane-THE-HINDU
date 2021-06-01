@@ -10,6 +10,7 @@ const Header = () => {
     const date = new Date().toDateString();
     const history = useHistory();
 
+    // opens up pop up navbar when user clicks on it
     const handlePop = () => {
         if(pop === "none"){
             setPop("block")
@@ -18,12 +19,15 @@ const Header = () => {
         }
     }
 
+    // redirect to home page on click of home button
     const handleRedirect = () => {
         history.push('/')
     }
+
     return (
         <>
         <div className={styles.main}>
+            {/* Social media and search input component */}
             <HeaderSocial />
             <img
                 src="https://th.thgim.com/static/theme/default/base/img/logo.png"
@@ -41,6 +45,7 @@ const Header = () => {
                 </span>
             </div>
         </div>
+        {/* main navbar component */}
         <HeaderNews handlePop = {handlePop}/>
             <Modal handlePop = {handlePop} display = {pop}/>
         </>

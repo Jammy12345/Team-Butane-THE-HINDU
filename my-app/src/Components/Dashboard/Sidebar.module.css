@@ -1,12 +1,8 @@
-body{
-    margin: 0;
-    padding: 0;
-}
 .Sidebar{
     height: 100%;
     width: 200px;
     margin-top: 1%;
-    margin-left: 10%;
+    margin-left: 14%;
 }
 .dashboardContent{
     margin: 1%;
