@@ -20,8 +20,6 @@ const GridConainer=styled.div`
     justify-content:space-between;
 
 `
-
-
 const ResultsPage = () => {
 
     const {news}=useSelector((state)=>state.app)

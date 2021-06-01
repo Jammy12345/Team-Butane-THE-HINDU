@@ -19,7 +19,6 @@ export const CardGroup = () => {
             </div>
             <div>
                 <Newcardm>
-              
                 </Newcardm>
                 <Newcardm/>
                 <Newcardm/>

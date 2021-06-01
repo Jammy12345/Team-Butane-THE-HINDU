@@ -17,35 +17,40 @@ const HomePage = () => {
     const news = useSelector((state) => state.app.news);
     const loading = useSelector((state) => state.app.loading);
     const error = useSelector((state) => state.app.error);
-    const dispatch = useDispatch();
     const [category, setCategory] = useState("research");
     const history = useHistory();
+    const dispatch = useDispatch();
 
-    const handleNews = (category) => {
-        setCategory(category);
-    };
-
+    // fetch the news data 
     useEffect(() => {
         dispatch(fetchData());
     }, [dispatch, category]);
 
+    // change the category of news when user click on pop up modal on main page
+    const handleNews = (category) => {
+        setCategory(category);
+    };
+
+    // Takes up user to news page when user clicks on news
     const handlePage = (id) => {
         history.push(`/news/${id}`);
         console.log(id);
     };
+
 
     return loading ? (
         <Loader/>
     ) : error ? (
         <div>Something went wrong</div>
     ) : (
-        // 
         <div>
             {news.length !== 0 && (
                 <div className={styles.news_div}>
                     <div>
+                        {/* Category header  */}
                         <Heading width={"100%"} category={"Sports"} />
                         <hr />
+                         {/* component to dispaly news when user change the news  */}
                         <NewsBox
                             data={news}
                             category={"Sports"}
@@ -53,8 +58,10 @@ const HomePage = () => {
                         />
                     </div>
                     <div>
+                        {/* category header */}
                         <Heading width={"100%"} category={"Entertainment"} />
                         <hr />
+                        {/* component to dispaly news when user change the news  */}
                         <NewsBox
                             data={news}
                             category={"entertainment"}
@@ -62,16 +69,19 @@ const HomePage = () => {
                         />
                     </div>
                     <div>
+                        {/* Region component */}
                         <Region data={news} handlePage={handlePage} />
                     </div>
                 </div>
             )}
             {news.length !== 0 && (
                 <div className={styles.hr}>
+                    {/* Category select tag to change news  */}
                     <Select category={category} handleNews={handleNews} />
                     <hr />
                     <div className={styles.news_div}>
                         <div>
+                        {/* component on the left below select tag */}
                             <AllNewsCard
                                 data={news}
                                 category={category}
@@ -93,6 +103,7 @@ const HomePage = () => {
                     <div>
                         <Heading width={"100%"} category={"Politics"} />
                         <hr />
+                        {/* component with 3 different news and ma main news with image */}
                         <NewsBox
                             data={news}
                             category={"politics"}
@@ -102,6 +113,7 @@ const HomePage = () => {
                     <div>
                         <Heading width={"100%"} category={"Research"} />
                         <hr />
+                        {/* component with 3 different news and ma main news with image */}
                         <NewsBox
                             data={news}
                             category={"technology"}
@@ -109,6 +121,7 @@ const HomePage = () => {
                         />
                     </div>
                     <div>
+                        {/* Region component */}
                         <Region data={news} handlePage={handlePage} />
                     </div>
                 </div>
@@ -119,6 +132,7 @@ const HomePage = () => {
                     <hr />
                     <div className={styles.news_div}>
                         <div>
+                        {/* component on the left below select tag */}
                             <AllNewsCard
                                 data={news}
                                 category={category}
@@ -142,6 +156,7 @@ const HomePage = () => {
                         category={"Recommended by The Hindu"}
                     />
                     <hr />
+                    {/* Recommended news component */}
                     <div className={styles.news_div}>
                         <BoxCard data={news} handlePage={handlePage} />
                         <BoxCard data={news} handlePage={handlePage} />
@@ -150,6 +165,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
+            {/* corousel */}
             <SliderCard data = {news} handlePage={handlePage} />
         </div>
     );

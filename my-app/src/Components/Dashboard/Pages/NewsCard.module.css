@@ -2,8 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    width: 90%;
-    margin: 1% auto;
+    width: 84%;
+    margin: 0;
     padding: 1%;
     background-color: rgb(245,245,245);
     flex-direction: row;

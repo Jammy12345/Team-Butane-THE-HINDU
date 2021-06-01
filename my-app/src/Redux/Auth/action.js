@@ -1,4 +1,3 @@
-import axios from "axios"
 import { checkLogin, postSignup } from "../../Utils/util"
 import { LOGIN_REQUEST, LOGIN_SUCCESS } from "../News/ActionTypes"
 import { LOGIN_FAILURE, LOGOUT, SIGNUP_FAILURE, SIGNUP_REQUEST, SIGNUP_SUCCESS } from "./actionTypes"
@@ -40,7 +39,6 @@ const logout = () => {
     }
 }
 const loginUser = (payload) => (dispatch) => {
-    // console.log(payload.password);
     dispatch(loginRequest());
     return checkLogin(payload.email)
         .then((res) => {

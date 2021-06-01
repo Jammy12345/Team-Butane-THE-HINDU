@@ -4,11 +4,10 @@ import { Dashboard } from '../Components/Dashboard/Dashboard'
 import { Home } from '../Components/LandingPage/Home'
 import { SignIn } from '../Components/Login/Signin'
 import { SignUp } from '../Components/Login/Signup'
-import { LoginContainer } from '../Components/LoginContainer'
-import { Searchnews } from '../Components/Searchnews'
 import { HinduNews } from '../Components/NewsPage/HinduNews'
 import Subscription from '../Components/Subscription'
 import ResultsPage from '../Components/ResultsPage'
+
 export const AllRoutes = () => {
     return (
       <>

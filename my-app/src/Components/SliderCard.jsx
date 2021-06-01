@@ -1,8 +1,6 @@
 import React from "react";
-
 import InfiniteCarousel from "react-leaf-carousel";
 import styled from "styled-components";
-import { GrFormClock } from "react-icons/gr";
 import styles from "../Styles/SliderCard.module.css";
 
 const Slider = styled.div`
@@ -17,7 +15,7 @@ const Slider = styled.div`
 
 const SliderCardContainer = styled.div`
     > img {
-        width: 220px;
+        width: 190px;
         height: 130px;
         padding: 18px;
     }
@@ -34,11 +32,12 @@ const SliderCardContainer = styled.div`
         font-weight: 600;
         margin-left: 10px;
         margin-top:-15px;
-        width: 180px;
+        width: 150px;
         cursor: pointer;
     }
 `;
 
+// Courasel
 export const SliderCard = ({ data, handlePage }) => {
     const [cardCount, setcardCount] = React.useState(3);
 
@@ -49,6 +48,7 @@ export const SliderCard = ({ data, handlePage }) => {
             setcardCount(1);
         }
     };
+
 
     const handleClicksubtract = () => {
         if (cardCount > 1 && cardCount <= 10) {

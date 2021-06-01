@@ -9,7 +9,7 @@ import IconButton from "@material-ui/core/IconButton";
 import Typography from "@material-ui/core/Typography";
 import { red } from "@material-ui/core/colors";
 import FavoriteIcon from "@material-ui/icons/Favorite";
-import ShareIcon from "@material-ui/icons/Share";
+import DeleteIcon from "@material-ui/icons/Delete";
 import MoreVertIcon from "@material-ui/icons/MoreVert";
 import styles from "../../Styles/Comments.module.css"
 
@@ -39,7 +39,8 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-export default function CommentCard({date, name, comment}) {
+export default function CommentCard({id,date, name, comment, user, handleDelete}) {
+  
   const classes = useStyles();
   const [colour, setColour] = useState("");
 
@@ -73,7 +74,7 @@ export default function CommentCard({date, name, comment}) {
           <FavoriteIcon onClick = {changeStyle} style = {{color : colour}}/>
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          {user === name && <DeleteIcon onClick = {() => handleDelete(id)}/>}
         </IconButton>
       </CardActions>
     </Card>

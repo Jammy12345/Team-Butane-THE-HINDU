@@ -9,12 +9,16 @@ const BottomCard=styled.div`
     align-items:space-between;
     
 `
+
+// Side card components
 export const SideCard = ({data, category}) => {
     const [newData, setNewData] = useState(data);
+    
     useEffect(() => {
         const news = data.filter((e) => e.category === category)
         setNewData(news)
     }, []);
+
     return (
         <div className={styles.container} >
           <u> <b><p className={styles.heading} >More from {category}</p></b></u>

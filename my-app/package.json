@@ -21,6 +21,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "react-share": "^4.4.0",
+    "react-social": "^1.10.0",
     "react-thunk": "^1.0.0",
     "react-to-print": "^2.12.4",
     "redux": "^4.0.5",
@@ -29,6 +30,7 @@
     "semantic-ui-react": "^2.0.3",
     "simple-react-comments": "^1.1.0",
     "styled-components": "^5.2.1",
+    "uuid": "^8.3.2",
     "web-vitals": "^1.1.0"
   },
   "scripts": {

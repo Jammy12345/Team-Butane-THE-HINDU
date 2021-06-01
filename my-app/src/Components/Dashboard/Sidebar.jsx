@@ -1,15 +1,12 @@
 import React from 'react'
 import { useSelector } from 'react-redux';
-import { useHistory } from 'react-router-dom';
 import styles from "../Dashboard/Sidebar.module.css";
 import { SidebarData } from "../Dashboard/SidebarData";
 import { Bookmark } from './Pages/Bookmark';
 import { Briefing } from './Pages/Briefing';
 import { MyStories } from './Pages/MyStories';
-import { Personalise } from './Pages/Personalise';
 import { Suggested } from './Pages/Suggested';
 import { Trending } from './Pages/Trending';
-import { Loginin } from "../Dashboard/Loginin";
 
 
 const Sidebar = () => {
@@ -41,7 +38,6 @@ const Sidebar = () => {
             </div>
     
             <div className={styles.dashboardContent}>
-                <h1 style={{color : "rgb(94,180,217)", textAlign: "left", marginLeft: "5%"}}>{isAuth ? "USER'S DASHBOARD" : ""}</h1>
                 {
                     route === "Bookmarks" && <Bookmark news={news} /> 
                 }
@@ -56,9 +52,6 @@ const Sidebar = () => {
                 }
                 {
                     route === "Briefing" && <Briefing news={news} />
-                }
-                {
-                    route === "Personalise" && <Personalise/>
                 }
             </div>
         </div>

@@ -1,6 +1,6 @@
 .news_div{
     width: 70%;
-    margin: 0 auto;
+    margin: 1.2% auto;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -38,7 +38,7 @@
 }
 .nbox h4{
     position: absolute;
-    top: 80px;
+    top: 70px;
     text-align: left;
     color: white;
     font-size: 18px;
@@ -80,7 +80,7 @@
 }
 .region_box{
     background: white;
-    width: 340px;
+    width: 287px;
 }
 .region_box h5{
     font-weight: 600;
@@ -114,12 +114,11 @@
     max-height: 180px;
 }
 .all_news_left{
-    min-width: 320px;
-    width: 330px;
+    min-width: 287px;
+    width: 287px;
     background: white;
     padding-bottom: 20px !important;
     height: 350px;
-    margin-right: 20px;
     overflow: hidden;
 }
 .all_news_left h1{
@@ -145,11 +144,11 @@
 .all_news_right{
     display: flex;
     align-items: center;
-    width: 325px;
+    width: 290px;
     background: white;
     border-bottom: 1px dotted #505050;
     padding: 8px;
-    margin-left: 18px;
+    margin-left: 35px;
 }
 .hr > div{
     width: 70%;

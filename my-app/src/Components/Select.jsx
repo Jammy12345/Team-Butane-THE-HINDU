@@ -4,9 +4,11 @@ import { FaBars } from "react-icons/fa";
 import { ImCross } from "react-icons/im";
 import { Link } from "react-router-dom";
 
+// Component to select news when pop up
 const Select = ({width, category, handleNews}) => {
     const [pop, setPop] = useState("none");
 
+    // Hides and display news
     const handleClick = () => {
         if (pop === "none") {
             setPop("block");
@@ -14,7 +16,8 @@ const Select = ({width, category, handleNews}) => {
             setPop("none");
         }
     };
-        console.log(width)
+
+    
     return (
         <div className={styles.news_category} stlye = {{width: width}}>
             <div className={styles.burger}>
