@@ -4,12 +4,7 @@ import { Comment } from "./Comment";
 import { ShareNews } from "./ShareNews";
 import { useReactToPrint } from "react-to-print";
 
-const NewsData = ({
-    data,
-    user,
-    auth,
-    handleClick,
-}) => {
+const NewsData = ({ data, user, auth, handleClick }) => {
     const [font, setFont] = useState(false);
     const page = useRef();
 

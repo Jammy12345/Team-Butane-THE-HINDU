@@ -44,14 +44,6 @@
     font-size: 23px;
     margin: 0;
 }
-/* .abs_report div:nth-child(1){
-    position: relative;
-    width: 78%;
-    margin: 0 auto;
-    top: -55px;
-    padding: 1%;
-    background: white;
-} */
 .abs_report img{
     width: 635px;
 }
@@ -89,4 +81,24 @@
     line-height: 25px;
     padding-bottom: 10px!important;
     color: #144d94;;
+}
+@media only screen and (max-width : 800px) {
+    .container{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .report_main_div, .abs_report img, .abs_report p, .report_top, .abs_report h1   {
+        max-width:99vw;
+        padding: 0;
+        text-align: center;
+    }
+    .abs_report{
+        width:fit-content;
+        padding: 0;
+    }
+    .right_contain div{
+        margin: 5% auto;
+    }
 }

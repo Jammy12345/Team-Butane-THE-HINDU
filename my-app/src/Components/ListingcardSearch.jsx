@@ -63,7 +63,7 @@ const ListingcardSearchContainer=styled.div`
 `
 
 export const ListingcardSearch = ({data,Eachnews}) => {
-    console.log(data)
+
     
     return (
         <ListingcardSearchContainer onClick={()=>Eachnews(data.id)} >

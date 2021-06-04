@@ -8,12 +8,13 @@ import {
     FaEnvelope,
 } from "react-icons/fa";
 import { AiFillPrinter } from "react-icons/ai";
+import { FacebookButton } from "react-social";
 
 // Share News Component
 const ShareNews = ({ handlePrint, handleSize, fontSize }) => {
 
     return (
-        <div className={styles.main}>
+        <div className={styles.main} style = {{display:"flex"}}>
             <div>SHARE ARTICLE</div>
             <div>|</div>
             <div>
@@ -29,7 +30,9 @@ const ShareNews = ({ handlePrint, handleSize, fontSize }) => {
             </div>
             <div>|</div>
             <div>
+            <FacebookButton style = {{background: "none", border: "none"}} url={window.location.href} appId={120330986797337}>
                 <FaFacebookF color="#34B7F1" />
+            </FacebookButton>
             </div>
             <div>|</div>
             <div>

@@ -129,7 +129,6 @@ export const fetchSearchNews=(payload)=>(dispatch)=>{
     } ).catch((err)=> console.log(err))
 }
 
-
 export const addComment = (payload) => (dispatch) => {
     dispatch(postNewsRequest())
     return postComment(payload)
