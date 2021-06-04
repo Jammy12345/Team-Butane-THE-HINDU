@@ -11,6 +11,11 @@ const Slider = styled.div`
     margin: 0px auto;
     background: white;
     margin-bottom:25px;
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0
+    }
+
 `;
 
 const SliderCardContainer = styled.div`
@@ -34,6 +39,13 @@ const SliderCardContainer = styled.div`
         margin-top:-15px;
         width: 150px;
         cursor: pointer;
+    }
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0
+        .heading{
+            width: fit-content;
+        }
     }
 `;
 
@@ -85,7 +97,7 @@ export const SliderCard = ({ data, handlePage }) => {
                             },
                         },
                         {
-                            breakpoint: 800,
+                            breakpoint: 801,
                             settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1,

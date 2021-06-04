@@ -14,7 +14,9 @@ const images = [admission, manipal, page, pharmacy, property, sathya, scooter]
 const Ads = () => {
     const [picture, setPicture] = useState(images[0]);
     const [pic, setPic] = useState(images[1]);
+
     let max = images.length-1
+    
 
     // Changes the ads at particular interval
     useEffect(() => {

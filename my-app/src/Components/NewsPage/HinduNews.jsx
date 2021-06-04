@@ -77,7 +77,7 @@ const HinduNews = React.memo(() => {
                 <SliderCard data={news} handlePage={handlePage} />
             )}
             {/* Footer */}
-            <Footer />
+            {/* <Footer /> */}
         </>
     );
 });

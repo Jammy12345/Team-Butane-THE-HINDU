@@ -22,3 +22,8 @@
   .mytextdiv Span{
       color:rgba(136, 136, 136,0.8)
   }
+  @media only screen and (max-width : 800px){
+    .mytextdiv{
+      width: 100%;
+    }
+  }
